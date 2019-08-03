@@ -1762,21 +1762,216 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Cmd+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcik7IGxpYnJhcnkoZHBseXIpOyBsaWJyYXJ5KHN0cmluZ3IpOyBsaWJyYXJ5KGx1YnJpZGF0ZSlcblxuYGBgIn0= -->
+<pre class="r"><code>library(readr); library(dplyr); library(stringr); library(lubridate)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYZHBseXLigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDigJhsdWJyaWRhdGXigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpiYXNl4oCZOlxuXG4gICAgZGF0ZVxuIn0= -->
+<pre><code>
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:base’:
+
+    date</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGFgXG5cbmBgYCJ9 -->
+<pre class="r"><code>`a`
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDJcbiJ9 -->
+<pre><code>[1] 2</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYTIpXG5cbmBgYCJ9 -->
+<pre class="r"><code>class(a2)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
+<pre><code>[1] &quot;integer&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYTJWZWN0b3IpXG5cbmBgYCJ9 -->
+<pre class="r"><code>class(a2Vector)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
+<pre><code>[1] &quot;integer&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2F0KGRpYWxvZ3VlLCBzZXA9XCJcXG5cIilcblxuYGBgIn0= -->
+<pre class="r"><code>cat(dialogue, sep=&quot;\n&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoi5bCP5piO6Kqq77yaJ+aYjuWkqeS4jeeUqOS4iuiqsuOAgidcbuWwj+iKseiqqu+8mifnnJ/nmoTll47vvJ8nXG4ifQ== -->
+<pre><code>小明說：'明天不用上課。'
+小花說：'真的嗎？'</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3R1ZGVudE1ham9ycyA8LSBmYWN0b3IoXG4gIGMoXCLntpPmv5/ns7tcIiwgXCLntpPmv5/ns7tcIiwgXCLms5Xlvovns7tcIilcbilcbmBgYCJ9 -->
+<pre class="r"><code>studentMajors &lt;- factor(
+  c(&quot;經濟系&quot;, &quot;經濟系&quot;, &quot;法律系&quot;)
+)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Cmd+Option+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Cmd+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3Moc3R1ZGVudE1ham9ycylcblxuYGBgIn0= -->
+<pre class="r"><code>class(studentMajors)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZmFjdG9yXCJcbiJ9 -->
+<pre><code>[1] &quot;factor&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGV2ZWxzKHN0dWRlbnRNYWpvcnMpXG5gYGAifQ== -->
+<pre class="r"><code>levels(studentMajors)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwi5rOV5b6L57O7XCIgXCLntpPmv5/ns7tcIlxuIn0= -->
+<pre><code>[1] &quot;法律系&quot; &quot;經濟系&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>levels顯示的類別名稱（categorical values）順序整數值即R真正儲存的內容:</p>
+<p>法律系會存成1; 經濟系會存成2。</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3R1ZGVudE1ham9yc1xuXG5gYGAifQ== -->
+<pre class="r"><code>studentMajors
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIOe2k+a/n+ezuyDntpPmv5/ns7sg5rOV5b6L57O7XG5MZXZlbHM6IOazleW+i+ezuyDntpPmv5/ns7tcbiJ9 -->
+<pre><code>[1] 經濟系 經濟系 法律系
+Levels: 法律系 經濟系</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHlwZW9mKHN0dWRlbnRNYWpvcnMpXG5gYGAifQ== -->
+<pre class="r"><code>typeof(studentMajors)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
+<pre><code>[1] &quot;integer&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuaW50ZWdlcihzdHVkZW50TWFqb3JzKVxuXG5gYGAifQ== -->
+<pre class="r"><code>as.integer(studentMajors)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIgMiAxXG4ifQ== -->
+<pre><code>[1] 2 2 1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>factor -&gt; integer</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnVtYmVyXG5cbmBgYCJ9 -->
+<pre class="r"><code>number
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAxLjIzICAxLjQyIDEyLjAwXG4ifQ== -->
+<pre><code>[1]  1.23  1.42 12.00</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuaW50ZWdlcihudW1iZXIpXG5cbmBgYCJ9 -->
+<pre class="r"><code>as.integer(number)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAxICAxIDEyXG4ifQ== -->
+<pre><code>[1]  1  1 12</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<div id="date-and-time" class="section level3">
+<h3>Date and Time</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubm93KFwiVVRDXCIpXG5cbmBgYCJ9 -->
+<pre class="r"><code>now(&quot;UTC&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wOC0wMyAxMTozNDoxNiBVVENcIlxuIn0= -->
+<pre><code>[1] &quot;2019-08-03 11:34:16 UTC&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWR5KFwiMSwxLDE5OTlcIilcblxuYGBgIn0= -->
+<pre class="r"><code>mdy(&quot;1,1,1999&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMTk5OS0wMS0wMVwiXG4ifQ== -->
+<pre><code>[1] &quot;1999-01-01&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZHRPYmplY3RWZWN0b3JcblxuYGBgIn0= -->
+<pre class="r"><code>dtObjectVector
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMTk3MC0wMS0wMSAwMDowMjo1MyBVVENcIiBcIjE5ODAtMDItMTEgMTE6MjU6MjIgVVRDXCJcbiJ9 -->
+<pre><code>[1] &quot;1970-01-01 00:02:53 UTC&quot; &quot;1980-02-11 11:25:22 UTC&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuaW50ZWdlcihkdE9iamVjdFZlY3RvcilcblxuYGBgIn0= -->
+<pre class="r"><code>as.integer(dtObjectVector)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAgICAgIDE3MyAzMTkxMTYzMjJcbiJ9 -->
+<pre><code>[1]       173 319116322</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAibnRwdS1wcm9ncmFtbWluZy1mb3ItZGF0YS1zY2llbmNlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiAKClRyeSBleGVjdXRpbmcgdGhpcyBjaHVuayBieSBjbGlja2luZyB0aGUgKlJ1biogYnV0dG9uIHdpdGhpbiB0aGUgY2h1bmsgb3IgYnkgcGxhY2luZyB5b3VyIGN1cnNvciBpbnNpZGUgaXQgYW5kIHByZXNzaW5nICpDbWQrU2hpZnQrRW50ZXIqLiAKCmBgYHtyfQpwbG90KGNhcnMpCmBgYAoKQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkNtZCtPcHRpb24rSSouCgpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkNtZCtTaGlmdCtLKiB0byBwcmV2aWV3IHRoZSBIVE1MIGZpbGUpLiAKClRoZSBwcmV2aWV3IHNob3dzIHlvdSBhIHJlbmRlcmVkIEhUTUwgY29weSBvZiB0aGUgY29udGVudHMgb2YgdGhlIGVkaXRvci4gQ29uc2VxdWVudGx5LCB1bmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBSIGNvZGUgY2h1bmtzLiBJbnN0ZWFkLCB0aGUgb3V0cHV0IG9mIHRoZSBjaHVuayB3aGVuIGl0IHdhcyBsYXN0IHJ1biBpbiB0aGUgZWRpdG9yIGlzIGRpc3BsYXllZC4KCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAibnRwdS1wcm9ncmFtbWluZy1mb3ItZGF0YS1zY2llbmNlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKTsgbGlicmFyeShkcGx5cik7IGxpYnJhcnkoc3RyaW5ncik7IGxpYnJhcnkobHVicmlkYXRlKQpgYGAKCmBgYHtyfQphIDwtIDIKYGBgCgpgYGB7cn0KYGFgCmBgYApgYGB7cn0KYTIgPC0gNUwKYGBgCgpgYGB7cn0KY2xhc3MoYTIpCmBgYAoKYGBge3J9CmFWZWN0b3I8LWMoNSw2LDcpCmEyVmVjdG9yPC1jKDVMLDZMLDdMKQpjbGFzcyhhVmVjdG9yKQpjbGFzcyhhMlZlY3RvcikKYGBgCgpgYGB7cn0KZGlhbG9ndWUgPC0gYygi5bCP5piO6Kqq77yaJ+aYjuWkqeS4jeeUqOS4iuiqsuOAgiciLAogICAgICAgICAgICAgICAi5bCP6Iqx6Kqq77yaJ+ecn+eahOWXju+8nyciKQoKY2F0KGRpYWxvZ3VlLCBzZXA9IlxuIikKYGBgCmBgYHtyfQpzdHVkZW50TWFqb3JzIDwtIGZhY3RvcigKICBjKCLntpPmv5/ns7siLCAi57aT5r+f57O7IiwgIuazleW+i+ezuyIpCikKYGBgCgpgYGB7cn0KY2xhc3Moc3R1ZGVudE1ham9ycykKYGBgCmBgYHtyfQpsZXZlbHMoc3R1ZGVudE1ham9ycykKYGBgCmxldmVsc+mhr+ekuueahOmhnuWIpeWQjeeose+8iGNhdGVnb3JpY2FsIHZhbHVlc++8iemghuW6j+aVtOaVuOWAvOWNs1LnnJ/mraPlhLLlrZjnmoTlhaflrrk6Cgrms5Xlvovns7vmnIPlrZjmiJAxOyDntpPmv5/ns7vmnIPlrZjmiJAy44CCCgpgYGB7cn0Kc3R1ZGVudE1ham9ycwpgYGAKCmBgYHtyfQp0eXBlb2Yoc3R1ZGVudE1ham9ycykKYGBgCmBgYHtyfQphcy5pbnRlZ2VyKHN0dWRlbnRNYWpvcnMpCmBgYApmYWN0b3IgLT4gaW50ZWdlciAKYGBge3J9Cm51bWJlciA8LSBjKDEuMjYsMS45OSwxMikKbnVtYmVyCmBgYAoKYGBge3J9CmFzLmludGVnZXIobnVtYmVyKQpgYGAKCiMjIyBEYXRlIGFuZCBUaW1lCmBgYHtyfQpub3coIlVUQyIpCmBgYApgYGB7cn0KbWR5KCIxLDEsMTk5OSIpCmBgYAoKYGBge3J9CmR0T2JqZWN0VmVjdG9yPC15bWRfaG1zKAogIGMoIjE5NzAtMDEtMDEgMDA6MDI6NTMiLAogICAgIjE5ODAtMDItMTEgMTE6MjU6MjIiKQopCmBgYAoKYGBge3J9CmR0T2JqZWN0VmVjdG9yCmBgYApgYGB7cn0KYXMuaW50ZWdlcihkdE9iamVjdFZlY3RvcikKYGBgCgo=</div>
 
 
 
