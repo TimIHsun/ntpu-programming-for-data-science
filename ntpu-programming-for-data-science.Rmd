@@ -18,6 +18,10 @@ a2 <- 5L
 ```
 
 ```{r}
+typeof(a2)
+```
+
+```{r}
 class(a2)
 ```
 
@@ -87,8 +91,21 @@ dtObjectVector<-ymd_hms(
 
 ```{r}
 dtObjectVector
+class(dtObjectVector)
+typeof(dtObjectVector)
 ```
 ```{r}
 as.integer(dtObjectVector)
 ```
+```{r}
+as.double(dtObjectVector)
+```
+```{r}
+as.numeric(dtObjectVector)
+```
+
+```{r}
+dtObject<-ymd_hms("1970-01-01 00:02:53") 
+```
+
 
