@@ -190,6 +190,12 @@ startingDate <- ymd("2000-02-17")
 startingDate + years(1) #period
 startingDate + dyears(1) #duration
 ```
+
+```{r}
+startingDate + 365
+```
+
+
 ```{r}
 ymd("2000-02-01") -> startingDate
 ymd("2019-08-11") -> endingDate
@@ -198,4 +204,65 @@ class(endingDate - startingDate)
 ```
 
 ## realational operator
+
+```{r}
+x <- 5
+y <- 7
+
+x==y
+x!=y
+```
+
+```{r}
+x2 <- c(1,5,10)
+y2 <- c(-1,5,20)
+
+x2==y2
+x2[[2]]==y2[[2]]
+```
+
+```{r}
+x3 <- c("小明","小花")
+y3 <- c("小明","小華")
+```
+
+```{r}
+x3[1] == y3[1]
+x3[2] != y3[2]
+```
+```{r}
+x4 <- c(1,5,8)
+y4 <- c(5,8)
+
+x4 %in% y4
+y4 %in% x4
+```
+
+```{r}
+x2 <- c(1,NA,10)
+y2 <- c(-1,NA,20)
+
+x3 <- c(NA,"小花")
+y3 <- c(NA,"小華")
+```
+
+```{r}
+is.na(x2)
+sum(x2)
+sum(x2, na.rm = T)
+x2 + 1
+```
+
+```{r}
+library(readr)
+exData2 <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/exData2.csv")
+currency <- exData2$幣別
+```
+
+```{r}
+as.factor(currency) -> currency
+levels(currency)
+```
+
+
 

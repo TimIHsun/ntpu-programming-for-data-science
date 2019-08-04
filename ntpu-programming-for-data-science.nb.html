@@ -1767,25 +1767,6 @@ $(document).ready(function () {
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcik7IGxpYnJhcnkoZHBseXIpOyBsaWJyYXJ5KHN0cmluZ3IpOyBsaWJyYXJ5KGx1YnJpZGF0ZSlcbmBgYCJ9 -->
 <pre class="r"><code>library(readr); library(dplyr); library(stringr); library(lubridate)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYZHBseXLigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDigJhsdWJyaWRhdGXigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTpiYXNl4oCZOlxuXG4gICAgZGF0ZVxuIn0= -->
-<pre><code>
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-
-Attaching package: ‘lubridate’
-
-The following object is masked from ‘package:base’:
-
-    date</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1797,9 +1778,8 @@ The following object is masked from ‘package:base’:
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGFgXG5cbmBgYCJ9 -->
-<pre class="r"><code>`a`
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGFgXG5gYGAifQ== -->
+<pre class="r"><code>`a`</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDJcbiJ9 -->
 <pre><code>[1] 2</code></pre>
@@ -1813,9 +1793,8 @@ The following object is masked from ‘package:base’:
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHlwZW9mKGEyKVxuXG5gYGAifQ== -->
-<pre class="r"><code>typeof(a2)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHlwZW9mKGEyKVxuYGBgIn0= -->
+<pre class="r"><code>typeof(a2)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
 <pre><code>[1] &quot;integer&quot;</code></pre>
@@ -1824,9 +1803,8 @@ The following object is masked from ‘package:base’:
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYTIpXG5cbmBgYCJ9 -->
-<pre class="r"><code>class(a2)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYTIpXG5gYGAifQ== -->
+<pre class="r"><code>class(a2)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
 <pre><code>[1] &quot;integer&quot;</code></pre>
@@ -1835,9 +1813,16 @@ The following object is masked from ‘package:base’:
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYTJWZWN0b3IpXG5cbmBgYCJ9 -->
-<pre class="r"><code>class(a2Vector)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYVZlY3RvcjwtYyg1LDYsNylcbmEyVmVjdG9yPC1jKDVMLDZMLDdMKVxuY2xhc3MoYVZlY3RvcilcbmBgYCJ9 -->
+<pre class="r"><code>aVector&lt;-c(5,6,7)
+a2Vector&lt;-c(5L,6L,7L)
+class(aVector)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
+<pre><code>[1] &quot;numeric&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYTJWZWN0b3IpXG5gYGAifQ== -->
+<pre class="r"><code>class(a2Vector)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
 <pre><code>[1] &quot;integer&quot;</code></pre>
@@ -1846,9 +1831,11 @@ The following object is masked from ‘package:base’:
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2F0KGRpYWxvZ3VlLCBzZXA9XCJcXG5cIilcblxuYGBgIn0= -->
-<pre class="r"><code>cat(dialogue, sep=&quot;\n&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGlhbG9ndWUgPC0gYyhcIuWwj+aYjuiqqu+8mifmmI7lpKnkuI3nlKjkuIroqrLjgIInXCIsXG4gICAgICAgICAgICAgICBcIuWwj+iKseiqqu+8mifnnJ/nmoTll47vvJ8nXCIpXG5cbmNhdChkaWFsb2d1ZSwgc2VwPVwiXFxuXCIpXG5gYGAifQ== -->
+<pre class="r"><code>dialogue &lt;- c(&quot;小明說：'明天不用上課。'&quot;,
+               &quot;小花說：'真的嗎？'&quot;)
+
+cat(dialogue, sep=&quot;\n&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoi5bCP5piO6Kqq77yaJ+aYjuWkqeS4jeeUqOS4iuiqsuOAgidcbuWwj+iKseiqqu+8mifnnJ/nmoTll47vvJ8nXG4ifQ== -->
 <pre><code>小明說：'明天不用上課。'
@@ -1865,9 +1852,8 @@ The following object is masked from ‘package:base’:
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3Moc3R1ZGVudE1ham9ycylcblxuYGBgIn0= -->
-<pre class="r"><code>class(studentMajors)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3Moc3R1ZGVudE1ham9ycylcbmBgYCJ9 -->
+<pre class="r"><code>class(studentMajors)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZmFjdG9yXCJcbiJ9 -->
 <pre><code>[1] &quot;factor&quot;</code></pre>
@@ -1886,9 +1872,8 @@ The following object is masked from ‘package:base’:
 <p>法律系會存成1; 經濟系會存成2。</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3R1ZGVudE1ham9yc1xuXG5gYGAifQ== -->
-<pre class="r"><code>studentMajors
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3R1ZGVudE1ham9yc1xuYGBgIn0= -->
+<pre class="r"><code>studentMajors</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIOe2k+a/n+ezuyDntpPmv5/ns7sg5rOV5b6L57O7XG5MZXZlbHM6IOazleW+i+ezuyDntpPmv5/ns7tcbiJ9 -->
 <pre><code>[1] 經濟系 經濟系 法律系
@@ -1906,9 +1891,8 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuaW50ZWdlcihzdHVkZW50TWFqb3JzKVxuXG5gYGAifQ== -->
-<pre class="r"><code>as.integer(studentMajors)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuaW50ZWdlcihzdHVkZW50TWFqb3JzKVxuYGBgIn0= -->
+<pre class="r"><code>as.integer(studentMajors)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIgMiAxXG4ifQ== -->
 <pre><code>[1] 2 2 1</code></pre>
@@ -1918,20 +1902,19 @@ Levels: 法律系 經濟系</code></pre>
 <p>factor -&gt; integer</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnVtYmVyXG5cbmBgYCJ9 -->
-<pre class="r"><code>number
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnVtYmVyIDwtIGMoMS4yNiwxLjk5LDEyKVxubnVtYmVyXG5gYGAifQ== -->
+<pre class="r"><code>number &lt;- c(1.26,1.99,12)
+number</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAxLjIzICAxLjQyIDEyLjAwXG4ifQ== -->
-<pre><code>[1]  1.23  1.42 12.00</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAxLjI2ICAxLjk5IDEyLjAwXG4ifQ== -->
+<pre><code>[1]  1.26  1.99 12.00</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuaW50ZWdlcihudW1iZXIpXG5cbmBgYCJ9 -->
-<pre class="r"><code>as.integer(number)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuaW50ZWdlcihudW1iZXIpXG5gYGAifQ== -->
+<pre class="r"><code>as.integer(number)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdICAxICAxIDEyXG4ifQ== -->
 <pre><code>[1]  1  1 12</code></pre>
@@ -1942,18 +1925,16 @@ Levels: 法律系 經濟系</code></pre>
 <h1>Date and Time</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubm93KFwiVVRDXCIpXG5cbmBgYCJ9 -->
-<pre class="r"><code>now(&quot;UTC&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubm93KFwiVVRDXCIpXG5gYGAifQ== -->
+<pre class="r"><code>now(&quot;UTC&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wOC0wMyAxMTozNDoxNiBVVENcIlxuIn0= -->
-<pre><code>[1] &quot;2019-08-03 11:34:16 UTC&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wOC0wNCAxMjo0OToxMCBVVENcIlxuIn0= -->
+<pre><code>[1] &quot;2019-08-04 12:49:10 UTC&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWR5KFwiMSwxLDE5OTlcIilcblxuYGBgIn0= -->
-<pre class="r"><code>mdy(&quot;1,1,1999&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWR5KFwiMSwxLDE5OTlcIilcbmBgYCJ9 -->
+<pre class="r"><code>mdy(&quot;1,1,1999&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMTk5OS0wMS0wMVwiXG4ifQ== -->
 <pre><code>[1] &quot;1999-01-01&quot;</code></pre>
@@ -1972,36 +1953,44 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHlwZW9mKGR0T2JqZWN0VmVjdG9yKVxuXG5gYGAifQ== -->
-<pre class="r"><code>typeof(dtObjectVector)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZHRPYmplY3RWZWN0b3JcbmBgYCJ9 -->
+<pre class="r"><code>dtObjectVector</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMTk3MC0wMS0wMSAwMDowMjo1MyBVVENcIiBcIjE5ODAtMDItMTEgMTE6MjU6MjIgVVRDXCJcbiJ9 -->
+<pre><code>[1] &quot;1970-01-01 00:02:53 UTC&quot; &quot;1980-02-11 11:25:22 UTC&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoZHRPYmplY3RWZWN0b3IpXG5gYGAifQ== -->
+<pre class="r"><code>class(dtObjectVector)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiUE9TSVhjdFwiIFwiUE9TSVh0XCIgXG4ifQ== -->
+<pre><code>[1] &quot;POSIXct&quot; &quot;POSIXt&quot; </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHlwZW9mKGR0T2JqZWN0VmVjdG9yKVxuYGBgIn0= -->
+<pre class="r"><code>typeof(dtObjectVector)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZG91YmxlXCJcbiJ9 -->
 <pre><code>[1] &quot;double&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuaW50ZWdlcihkdE9iamVjdFZlY3RvcilcblxuYGBgIn0= -->
-<pre class="r"><code>as.integer(dtObjectVector)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuaW50ZWdlcihkdE9iamVjdFZlY3RvcilcbmBgYCJ9 -->
+<pre class="r"><code>as.integer(dtObjectVector)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdICAgICAgIDE3MyAzMTkxMTYzMjJcbiJ9 -->
 <pre><code>[1]       173 319116322</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZG91YmxlKGR0T2JqZWN0VmVjdG9yKVxuXG5gYGAifQ== -->
-<pre class="r"><code>as.double(dtObjectVector)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZG91YmxlKGR0T2JqZWN0VmVjdG9yKVxuYGBgIn0= -->
+<pre class="r"><code>as.double(dtObjectVector)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdICAgICAgIDE3MyAzMTkxMTYzMjJcbiJ9 -->
 <pre><code>[1]       173 319116322</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMubnVtZXJpYyhkdE9iamVjdFZlY3RvcilcblxuYGBgIn0= -->
-<pre class="r"><code>as.numeric(dtObjectVector)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMubnVtZXJpYyhkdE9iamVjdFZlY3RvcilcbmBgYCJ9 -->
+<pre class="r"><code>as.numeric(dtObjectVector)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdICAgICAgIDE3MyAzMTkxMTYzMjJcbiJ9 -->
 <pre><code>[1]       173 319116322</code></pre>
@@ -2010,13 +1999,15 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZHRPYmplY3Q8LXltZF9obXMoXCIxOTcwLTAxLTAxIDAwOjAyOjUzXCIpIFxuYGBgIn0= -->
+<pre class="r"><code>dtObject&lt;-ymd_hms(&quot;1970-01-01 00:02:53&quot;) </code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3lzLnRpbWV6b25lKClcblxuYGBgIn0= -->
-<pre class="r"><code>Sys.timezone()
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3lzLnRpbWV6b25lKClcbmBgYCJ9 -->
+<pre class="r"><code>Sys.timezone()</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQXNpYS9UYWlwZWlcIlxuIn0= -->
 <pre><code>[1] &quot;Asia/Taipei&quot;</code></pre>
@@ -2030,9 +2021,8 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3ModHdEYXRlVGltZSlcblxuYGBgIn0= -->
-<pre class="r"><code>class(twDateTime)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3ModHdEYXRlVGltZSlcbmBgYCJ9 -->
+<pre class="r"><code>class(twDateTime)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiUE9TSVhjdFwiIFwiUE9TSVh0XCIgXG4ifQ== -->
 <pre><code>[1] &quot;POSIXct&quot; &quot;POSIXt&quot; </code></pre>
@@ -2041,9 +2031,14 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZG91YmxlKHR3RGF0ZVRpbWUpXG5cbmBgYCJ9 -->
-<pre class="r"><code>as.double(twDateTime)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHdEYXRlVGltZVxuYGBgIn0= -->
+<pre class="r"><code>twDateTime</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wMy0xOCAxNDowNDowMCBDU1RcIlxuIn0= -->
+<pre><code>[1] &quot;2019-03-18 14:04:00 CST&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZG91YmxlKHR3RGF0ZVRpbWUpXG5gYGAifQ== -->
+<pre class="r"><code>as.double(twDateTime)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE1NTI4ODkwNDBcbiJ9 -->
 <pre><code>[1] 1552889040</code></pre>
@@ -2054,20 +2049,15 @@ Levels: 法律系 經濟系</code></pre>
 <h2>Get date-time in a different time zone</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2l0aF90eih0d0RhdGVUaW1lLCBcIkV1cm9wZS9MaXNib25cIilcblxuYGBgIn0= -->
-<pre class="r"><code>with_tz(twDateTime, &quot;Europe/Lisbon&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTGlzYm9uRGF0ZVRpbWUgPC0gd2l0aF90eih0d0RhdGVUaW1lLHR6b25lPVwiRXVyb3BlL0xpc2JvblwiKVxuYGBgIn0= -->
+<pre class="r"><code>LisbonDateTime &lt;- with_tz(twDateTime,tzone=&quot;Europe/Lisbon&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wMy0xOCAwNjowNDowMCBXRVRcIlxuIn0= -->
-<pre><code>[1] &quot;2019-03-18 06:04:00 WET&quot;</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2l0aF90eih0d0RhdGVUaW1lLCBcIlVUQ1wiKVxuXG5gYGAifQ== -->
-<pre class="r"><code>with_tz(twDateTime, &quot;UTC&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2l0aF90eih0d0RhdGVUaW1lLCBcIlVUQ1wiKVxuYGBgIn0= -->
+<pre class="r"><code>with_tz(twDateTime, &quot;UTC&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wMy0xOCAwNjowNDowMCBVVENcIlxuIn0= -->
 <pre><code>[1] &quot;2019-03-18 06:04:00 UTC&quot;</code></pre>
@@ -2076,9 +2066,8 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2l0aF90eihMaXNib25EYXRlVGltZSwgXCJVVENcIilcblxuYGBgIn0= -->
-<pre class="r"><code>with_tz(LisbonDateTime, &quot;UTC&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2l0aF90eihMaXNib25EYXRlVGltZSwgXCJVVENcIilcbmBgYCJ9 -->
+<pre class="r"><code>with_tz(LisbonDateTime, &quot;UTC&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wMy0xOCAwNjowNDowMCBVVENcIlxuIn0= -->
 <pre><code>[1] &quot;2019-03-18 06:04:00 UTC&quot;</code></pre>
@@ -2087,9 +2076,8 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueW1kKFwiMjAxOC0wOS0xMVwiKVxuXG5gYGAifQ== -->
-<pre class="r"><code>ymd(&quot;2018-09-11&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueW1kKFwiMjAxOC0wOS0xMVwiKVxuYGBgIn0= -->
+<pre class="r"><code>ymd(&quot;2018-09-11&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOC0wOS0xMVwiXG4ifQ== -->
 <pre><code>[1] &quot;2018-09-11&quot;</code></pre>
@@ -2098,9 +2086,8 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWR5KFwiTWFyIDMsIDIwMTlcIilcblxuYGBgIn0= -->
-<pre class="r"><code>mdy(&quot;Mar 3, 2019&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWR5KFwiTWFyIDMsIDIwMTlcIilcbmBgYCJ9 -->
+<pre class="r"><code>mdy(&quot;Mar 3, 2019&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wMy0yMFwiXG4ifQ== -->
 <pre><code>[1] &quot;2019-03-20&quot;</code></pre>
@@ -2113,18 +2100,38 @@ Levels: 法律系 經濟系</code></pre>
 <h1>Operation on Vectors</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYSlcblxuYGBgIn0= -->
-<pre class="r"><code>class(a)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSBjKDEsIDUsIC0zKVxuYiA8LSBjKDAuNSwgMTIsIDIpXG5gYGAifQ== -->
+<pre class="r"><code>a &lt;- c(1, 5, -3)
+b &lt;- c(0.5, 12, 2)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
-<pre><code>[1] &quot;numeric&quot;</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSUlMlxuXG5gYGAifQ== -->
-<pre class="r"><code>a%%2
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYStiXG5gYGAifQ== -->
+<pre class="r"><code>a+b</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAxLjUgMTcuMCAtMS4wXG4ifQ== -->
+<pre><code>[1]  1.5 17.0 -1.0</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSpiXG5gYGAifQ== -->
+<pre class="r"><code>a*b</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAwLjUgNjAuMCAtNi4wXG4ifQ== -->
+<pre><code>[1]  0.5 60.0 -6.0</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm91bmQoYS9iLCBkaWdpdHMgPSAzKVxuYGBgIn0= -->
+<pre class="r"><code>round(a/b, digits = 3)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAyLjAwMCAgMC40MTcgLTEuNTAwXG4ifQ== -->
+<pre><code>[1]  2.000  0.417 -1.500</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIGFeMlxuYGBgIn0= -->
+<pre class="r"><code> a^2</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAxIDI1ICA5XG4ifQ== -->
+<pre><code>[1]  1 25  9</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSUlMlxuYGBgIn0= -->
+<pre class="r"><code>a%%2</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMSAxXG4ifQ== -->
 <pre><code>[1] 1 1 1</code></pre>
@@ -2133,9 +2140,10 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYUwpXG5cbmBgYCJ9 -->
-<pre class="r"><code>class(aL)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYUwgPC0gYygxTCwgNUwsIC0zTClcbmJMIDwtIGMoLTJMLCAtNEwsIDhMKVxuY2xhc3MoYUwpXG5gYGAifQ== -->
+<pre class="r"><code>aL &lt;- c(1L, 5L, -3L)
+bL &lt;- c(-2L, -4L, 8L)
+class(aL)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
 <pre><code>[1] &quot;integer&quot;</code></pre>
@@ -2144,18 +2152,34 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYUwrYkwpXG5cbmBgYCJ9 -->
-<pre class="r"><code>class(aL+bL)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSthTFxuYGBgIn0= -->
+<pre class="r"><code>a+aL</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAyIDEwIC02XG4ifQ== -->
+<pre><code>[1]  2 10 -6</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYSthTClcbmBgYCJ9 -->
+<pre class="r"><code>class(a+aL)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
+<pre><code>[1] &quot;numeric&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYUwrYkxcbmBgYCJ9 -->
+<pre class="r"><code>aL+bL</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIC0xICAxICA1XG4ifQ== -->
+<pre><code>[1] -1  1  5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYUwrYkwpXG5gYGAifQ== -->
+<pre class="r"><code>class(aL+bL)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
 <pre><code>[1] &quot;integer&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNCthXG5cbmBgYCJ9 -->
-<pre class="r"><code>4+a
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNCthXG5gYGAifQ== -->
+<pre class="r"><code>4+a</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDUgOSAxXG4ifQ== -->
 <pre><code>[1] 5 9 1</code></pre>
@@ -2184,12 +2208,18 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF5RGlmZlxuXG5gYGAifQ== -->
-<pre class="r"><code>dayDiff
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF5RGlmZiA8LSB5bWQoXCIyMDE5LTA4LTExXCIpLSB5bWQoXCIyMDAwLTAxLTAxXCIpXG5kYXlEaWZmXG5gYGAifQ== -->
+<pre class="r"><code>dayDiff &lt;- ymd(&quot;2019-08-11&quot;)- ymd(&quot;2000-01-01&quot;)
+dayDiff</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiVGltZSBkaWZmZXJlbmNlIG9mIDcxNjIgZGF5c1xuIn0= -->
 <pre><code>Time difference of 7162 days</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoZGF5RGlmZilcbmBgYCJ9 -->
+<pre class="r"><code>class(dayDiff)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZGlmZnRpbWVcIlxuIn0= -->
+<pre><code>[1] &quot;difftime&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -2210,10 +2240,23 @@ startingDate + years(1) #period</code></pre>
 <pre><code>[1] &quot;2001-02-16&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoZW5kaW5nRGF0ZSAtIHN0YXJ0aW5nRGF0ZSlcblxuYGBgIn0= -->
-<pre class="r"><code>class(endingDate - startingDate)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RhcnRpbmdEYXRlICsgMzY1XG5gYGAifQ== -->
+<pre class="r"><code>startingDate + 365</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAwMS0wMi0xNlwiXG4ifQ== -->
+<pre><code>[1] &quot;2001-02-16&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueW1kKFwiMjAwMC0wMi0wMVwiKSAtPiBzdGFydGluZ0RhdGVcbnltZChcIjIwMTktMDgtMTFcIikgLT4gZW5kaW5nRGF0ZVxuY2xhc3MoZW5kaW5nRGF0ZSAtIHN0YXJ0aW5nRGF0ZSlcbmBgYCJ9 -->
+<pre class="r"><code>ymd(&quot;2000-02-01&quot;) -&gt; startingDate
+ymd(&quot;2019-08-11&quot;) -&gt; endingDate
+class(endingDate - startingDate)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZGlmZnRpbWVcIlxuIn0= -->
 <pre><code>[1] &quot;difftime&quot;</code></pre>
@@ -2223,10 +2266,158 @@ startingDate + years(1) #period</code></pre>
 <div id="realational-operator" class="section level2">
 <h2>realational operator</h2>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSA1XG55IDwtIDdcblxueD09eVxuYGBgIn0= -->
+<pre class="r"><code>x &lt;- 5
+y &lt;- 7
+
+x==y</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFXG4ifQ== -->
+<pre><code>[1] FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCE9eVxuYGBgIn0= -->
+<pre class="r"><code>x!=y</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDIgPC0gYygxLDUsMTApXG55MiA8LSBjKC0xLDUsMjApXG5cbngyPT15MlxuYGBgIn0= -->
+<pre class="r"><code>x2 &lt;- c(1,5,10)
+y2 &lt;- c(-1,5,20)
+
+x2==y2</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFICBUUlVFIEZBTFNFXG4ifQ== -->
+<pre><code>[1] FALSE  TRUE FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDJbWzJdXT09eTJbWzJdXVxuYGBgIn0= -->
+<pre class="r"><code>x2[[2]]==y2[[2]]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDMgPC0gYyhcIuWwj+aYjlwiLFwi5bCP6IqxXCIpXG55MyA8LSBjKFwi5bCP5piOXCIsXCLlsI/oj69cIilcbmBgYCJ9 -->
+<pre class="r"><code>x3 &lt;- c(&quot;小明&quot;,&quot;小花&quot;)
+y3 &lt;- c(&quot;小明&quot;,&quot;小華&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDNbMV0gPT0geTNbMV1cbmBgYCJ9 -->
+<pre class="r"><code>x3[1] == y3[1]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDNbMl0gIT0geTNbMl1cbmBgYCJ9 -->
+<pre class="r"><code>x3[2] != y3[2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDQgPC0gYygxLDUsOClcbnk0IDwtIGMoNSw4KVxuXG54NCAlaW4lIHk0XG5gYGAifQ== -->
+<pre class="r"><code>x4 &lt;- c(1,5,8)
+y4 &lt;- c(5,8)
+
+x4 %in% y4</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFICBUUlVFICBUUlVFXG4ifQ== -->
+<pre><code>[1] FALSE  TRUE  TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueTQgJWluJSB4NFxuYGBgIn0= -->
+<pre class="r"><code>y4 %in% x4</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUUgVFJVRVxuIn0= -->
+<pre><code>[1] TRUE TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDIgPC0gYygxLE5BLDEwKVxueTIgPC0gYygtMSxOQSwyMClcblxueDMgPC0gYyhOQSxcIuWwj+iKsVwiKVxueTMgPC0gYyhOQSxcIuWwj+iPr1wiKVxuYGBgIn0= -->
+<pre class="r"><code>x2 &lt;- c(1,NA,10)
+y2 &lt;- c(-1,NA,20)
+
+x3 &lt;- c(NA,&quot;小花&quot;)
+y3 &lt;- c(NA,&quot;小華&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXMubmEoeDIpXG5gYGAifQ== -->
+<pre class="r"><code>is.na(x2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFICBUUlVFIEZBTFNFXG4ifQ== -->
+<pre><code>[1] FALSE  TRUE FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtKHgyKVxuYGBgIn0= -->
+<pre class="r"><code>sum(x2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIE5BXG4ifQ== -->
+<pre><code>[1] NA</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtKHgyLCBuYS5ybSA9IFQpXG5gYGAifQ== -->
+<pre class="r"><code>sum(x2, na.rm = T)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDExXG4ifQ== -->
+<pre><code>[1] 11</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueDIgKyAxXG5gYGAifQ== -->
+<pre class="r"><code>x2 + 1</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAyIE5BIDExXG4ifQ== -->
+<pre><code>[1]  2 NA 11</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmV4RGF0YTIgPC0gcmVhZF9jc3YoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2dpdGh1Yi1kYXRhL21hc3Rlci9leERhdGEyLmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>library(readr)
+exData2 &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-data/master/exData2.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICDmnJ/plpMgPSBjb2xfZGF0ZShmb3JtYXQgPSBcIlwiKSxcbiAg5bmj5YilID0gY29sX2NoYXJhY3RlcigpLFxuICDljK/njocgPSBjb2xfZG91YmxlKClcbilcbiJ9 -->
+<pre><code>Parsed with column specification:
+cols(
+  期間 = col_date(format = &quot;&quot;),
+  幣別 = col_character(),
+  匯率 = col_double()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY3VycmVuY3kgPC0gZXhEYXRhMiTluaPliKVcbmBgYCJ9 -->
+<pre class="r"><code>currency &lt;- exData2$幣別</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGV2ZWxzKGN1cnJlbmN5KVxuXG5gYGAifQ== -->
+<pre class="r"><code>levels(currency)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwi6Z+T5YWDS1JXL1VTRFwiICAgXCLmrZDlhYNVU0QvRVVSXCIgICBcIuS6uuawkeW5o0NOWS9VU0RcIiBcIuaXpeWck0pQWS9VU0RcIiAgIFwi5paw5Y+w5bmjTlREL1VTRFwiXG4ifQ== -->
+<pre><code>[1] &quot;韓元KRW/USD&quot;   &quot;歐元USD/EUR&quot;   &quot;人民幣CNY/USD&quot; &quot;日圓JPY/USD&quot;   &quot;新台幣NTD/USD&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAibnRwdS1wcm9ncmFtbWluZy1mb3ItZGF0YS1zY2llbmNlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKTsgbGlicmFyeShkcGx5cik7IGxpYnJhcnkoc3RyaW5ncik7IGxpYnJhcnkobHVicmlkYXRlKQpgYGAKCmBgYHtyfQphIDwtIDIKYGBgCgpgYGB7cn0KYGFgCmBgYApgYGB7cn0KYTIgPC0gNUwKYGBgCgpgYGB7cn0KdHlwZW9mKGEyKQpgYGAKCmBgYHtyfQpjbGFzcyhhMikKYGBgCgpgYGB7cn0KYVZlY3RvcjwtYyg1LDYsNykKYTJWZWN0b3I8LWMoNUwsNkwsN0wpCmNsYXNzKGFWZWN0b3IpCmNsYXNzKGEyVmVjdG9yKQpgYGAKCmBgYHtyfQpkaWFsb2d1ZSA8LSBjKCLlsI/mmI7oqqrvvJon5piO5aSp5LiN55So5LiK6Kqy44CCJyIsCiAgICAgICAgICAgICAgICLlsI/oirHoqqrvvJon55yf55qE5ZeO77yfJyIpCgpjYXQoZGlhbG9ndWUsIHNlcD0iXG4iKQpgYGAKYGBge3J9CnN0dWRlbnRNYWpvcnMgPC0gZmFjdG9yKAogIGMoIue2k+a/n+ezuyIsICLntpPmv5/ns7siLCAi5rOV5b6L57O7IikKKQpgYGAKCmBgYHtyfQpjbGFzcyhzdHVkZW50TWFqb3JzKQpgYGAKYGBge3J9CmxldmVscyhzdHVkZW50TWFqb3JzKQpgYGAKbGV2ZWxz6aGv56S655qE6aGe5Yil5ZCN56ix77yIY2F0ZWdvcmljYWwgdmFsdWVz77yJ6aCG5bqP5pW05pW45YC85Y2zUuecn+ato+WEsuWtmOeahOWFp+WuuToKCuazleW+i+ezu+acg+WtmOaIkDE7IOe2k+a/n+ezu+acg+WtmOaIkDLjgIIKCmBgYHtyfQpzdHVkZW50TWFqb3JzCmBgYAoKYGBge3J9CnR5cGVvZihzdHVkZW50TWFqb3JzKQpgYGAKYGBge3J9CmFzLmludGVnZXIoc3R1ZGVudE1ham9ycykKYGBgCmZhY3RvciAtPiBpbnRlZ2VyIApgYGB7cn0KbnVtYmVyIDwtIGMoMS4yNiwxLjk5LDEyKQpudW1iZXIKYGBgCgpgYGB7cn0KYXMuaW50ZWdlcihudW1iZXIpCmBgYAoKIyBEYXRlIGFuZCBUaW1lCmBgYHtyfQpub3coIlVUQyIpCmBgYApgYGB7cn0KbWR5KCIxLDEsMTk5OSIpCmBgYAoKYGBge3J9CmR0T2JqZWN0VmVjdG9yPC15bWRfaG1zKAogIGMoIjE5NzAtMDEtMDEgMDA6MDI6NTMiLAogICAgIjE5ODAtMDItMTEgMTE6MjU6MjIiKQopCmBgYAoKYGBge3J9CmR0T2JqZWN0VmVjdG9yCmNsYXNzKGR0T2JqZWN0VmVjdG9yKQp0eXBlb2YoZHRPYmplY3RWZWN0b3IpCmBgYApgYGB7cn0KYXMuaW50ZWdlcihkdE9iamVjdFZlY3RvcikKYGBgCmBgYHtyfQphcy5kb3VibGUoZHRPYmplY3RWZWN0b3IpCmBgYApgYGB7cn0KYXMubnVtZXJpYyhkdE9iamVjdFZlY3RvcikKYGBgCgpgYGB7cn0KZHRPYmplY3Q8LXltZF9obXMoIjE5NzAtMDEtMDEgMDA6MDI6NTMiKSAKYGBgCgpgYGB7cn0KU3lzLnRpbWV6b25lKCkKYGBgCmBgYHtyfQp0d0RhdGVUaW1lIDwtIHltZF9obXMoIjIwMTktMDMtMTggMTQ6MDQ6MDAiLCB0ej0iQXNpYS9UYWlwZWkiKQpgYGAKCmBgYHtyfQpjbGFzcyh0d0RhdGVUaW1lKQpgYGAKCmBgYHtyfQp0d0RhdGVUaW1lCmFzLmRvdWJsZSh0d0RhdGVUaW1lKQpgYGAKIyMgR2V0IGRhdGUtdGltZSBpbiBhIGRpZmZlcmVudCB0aW1lIHpvbmUKCmBgYHtyfQpMaXNib25EYXRlVGltZSA8LSB3aXRoX3R6KHR3RGF0ZVRpbWUsdHpvbmU9IkV1cm9wZS9MaXNib24iKQpgYGAKCmBgYHtyfQp3aXRoX3R6KHR3RGF0ZVRpbWUsICJVVEMiKQpgYGAKCmBgYHtyfQp3aXRoX3R6KExpc2JvbkRhdGVUaW1lLCAiVVRDIikKYGBgCgpgYGB7cn0KeW1kKCIyMDE4LTA5LTExIikKYGBgCgpgYGB7cn0KbWR5KCJNYXIgMywgMjAxOSIpCmBgYAojIE9wZXJhdGlvbiBvbiBWZWN0b3JzCmBgYHtyfQphIDwtIGMoMSwgNSwgLTMpCmIgPC0gYygwLjUsIDEyLCAyKQpgYGAKYGBge3J9CmErYgphKmIKcm91bmQoYS9iLCBkaWdpdHMgPSAzKQogYV4yCmElJTIKYGBgCgpgYGB7cn0KYUwgPC0gYygxTCwgNUwsIC0zTCkKYkwgPC0gYygtMkwsIC00TCwgOEwpCmNsYXNzKGFMKQpgYGAKCmBgYHtyfQphK2FMCmNsYXNzKGErYUwpCmFMK2JMCmNsYXNzKGFMK2JMKQpgYGAKYGBge3J9CjQrYQpgYGAKCmBgYHtyfQp0d0RhdGVUaW1lCnR3RGF0ZVRpbWUgKyAxCnR3RGF0ZVRpbWUgKyA4NjQwMApgYGAKYGBge3J9CmRheURpZmYgPC0geW1kKCIyMDE5LTA4LTExIiktIHltZCgiMjAwMC0wMS0wMSIpCmRheURpZmYKY2xhc3MoZGF5RGlmZikKYGBgCgrlm6DngroyMDAw5bm05piv6ZaP5bm0IOaJgOS7pSAxLXllYXIgcGVyaW9kIGFuZCAxLXllYXIgZHVyYXRpb24g5LiN5ZCMCmBgYHtyfQpzdGFydGluZ0RhdGUgPC0geW1kKCIyMDAwLTAyLTE3IikKc3RhcnRpbmdEYXRlICsgeWVhcnMoMSkgI3BlcmlvZApzdGFydGluZ0RhdGUgKyBkeWVhcnMoMSkgI2R1cmF0aW9uCmBgYApgYGB7cn0KeW1kKCIyMDAwLTAyLTAxIikgLT4gc3RhcnRpbmdEYXRlCnltZCgiMjAxOS0wOC0xMSIpIC0+IGVuZGluZ0RhdGUKY2xhc3MoZW5kaW5nRGF0ZSAtIHN0YXJ0aW5nRGF0ZSkKCmBgYAoKIyMgcmVhbGF0aW9uYWwgb3BlcmF0b3IKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAibnRwdS1wcm9ncmFtbWluZy1mb3ItZGF0YS1zY2llbmNlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKTsgbGlicmFyeShkcGx5cik7IGxpYnJhcnkoc3RyaW5ncik7IGxpYnJhcnkobHVicmlkYXRlKQpgYGAKCmBgYHtyfQphIDwtIDIKYGBgCgpgYGB7cn0KYGFgCmBgYApgYGB7cn0KYTIgPC0gNUwKYGBgCgpgYGB7cn0KdHlwZW9mKGEyKQpgYGAKCmBgYHtyfQpjbGFzcyhhMikKYGBgCgpgYGB7cn0KYVZlY3RvcjwtYyg1LDYsNykKYTJWZWN0b3I8LWMoNUwsNkwsN0wpCmNsYXNzKGFWZWN0b3IpCmNsYXNzKGEyVmVjdG9yKQpgYGAKCmBgYHtyfQpkaWFsb2d1ZSA8LSBjKCLlsI/mmI7oqqrvvJon5piO5aSp5LiN55So5LiK6Kqy44CCJyIsCiAgICAgICAgICAgICAgICLlsI/oirHoqqrvvJon55yf55qE5ZeO77yfJyIpCgpjYXQoZGlhbG9ndWUsIHNlcD0iXG4iKQpgYGAKYGBge3J9CnN0dWRlbnRNYWpvcnMgPC0gZmFjdG9yKAogIGMoIue2k+a/n+ezuyIsICLntpPmv5/ns7siLCAi5rOV5b6L57O7IikKKQpgYGAKCmBgYHtyfQpjbGFzcyhzdHVkZW50TWFqb3JzKQpgYGAKYGBge3J9CmxldmVscyhzdHVkZW50TWFqb3JzKQpgYGAKbGV2ZWxz6aGv56S655qE6aGe5Yil5ZCN56ix77yIY2F0ZWdvcmljYWwgdmFsdWVz77yJ6aCG5bqP5pW05pW45YC85Y2zUuecn+ato+WEsuWtmOeahOWFp+WuuToKCuazleW+i+ezu+acg+WtmOaIkDE7IOe2k+a/n+ezu+acg+WtmOaIkDLjgIIKCmBgYHtyfQpzdHVkZW50TWFqb3JzCmBgYAoKYGBge3J9CnR5cGVvZihzdHVkZW50TWFqb3JzKQpgYGAKYGBge3J9CmFzLmludGVnZXIoc3R1ZGVudE1ham9ycykKYGBgCmZhY3RvciAtPiBpbnRlZ2VyIApgYGB7cn0KbnVtYmVyIDwtIGMoMS4yNiwxLjk5LDEyKQpudW1iZXIKYGBgCgpgYGB7cn0KYXMuaW50ZWdlcihudW1iZXIpCmBgYAoKIyBEYXRlIGFuZCBUaW1lCmBgYHtyfQpub3coIlVUQyIpCmBgYApgYGB7cn0KbWR5KCIxLDEsMTk5OSIpCmBgYAoKYGBge3J9CmR0T2JqZWN0VmVjdG9yPC15bWRfaG1zKAogIGMoIjE5NzAtMDEtMDEgMDA6MDI6NTMiLAogICAgIjE5ODAtMDItMTEgMTE6MjU6MjIiKQopCmBgYAoKYGBge3J9CmR0T2JqZWN0VmVjdG9yCmNsYXNzKGR0T2JqZWN0VmVjdG9yKQp0eXBlb2YoZHRPYmplY3RWZWN0b3IpCmBgYApgYGB7cn0KYXMuaW50ZWdlcihkdE9iamVjdFZlY3RvcikKYGBgCmBgYHtyfQphcy5kb3VibGUoZHRPYmplY3RWZWN0b3IpCmBgYApgYGB7cn0KYXMubnVtZXJpYyhkdE9iamVjdFZlY3RvcikKYGBgCgpgYGB7cn0KZHRPYmplY3Q8LXltZF9obXMoIjE5NzAtMDEtMDEgMDA6MDI6NTMiKSAKYGBgCgpgYGB7cn0KU3lzLnRpbWV6b25lKCkKYGBgCmBgYHtyfQp0d0RhdGVUaW1lIDwtIHltZF9obXMoIjIwMTktMDMtMTggMTQ6MDQ6MDAiLCB0ej0iQXNpYS9UYWlwZWkiKQpgYGAKCmBgYHtyfQpjbGFzcyh0d0RhdGVUaW1lKQpgYGAKCmBgYHtyfQp0d0RhdGVUaW1lCmFzLmRvdWJsZSh0d0RhdGVUaW1lKQpgYGAKIyMgR2V0IGRhdGUtdGltZSBpbiBhIGRpZmZlcmVudCB0aW1lIHpvbmUKCmBgYHtyfQpMaXNib25EYXRlVGltZSA8LSB3aXRoX3R6KHR3RGF0ZVRpbWUsdHpvbmU9IkV1cm9wZS9MaXNib24iKQpgYGAKCmBgYHtyfQp3aXRoX3R6KHR3RGF0ZVRpbWUsICJVVEMiKQpgYGAKCmBgYHtyfQp3aXRoX3R6KExpc2JvbkRhdGVUaW1lLCAiVVRDIikKYGBgCgpgYGB7cn0KeW1kKCIyMDE4LTA5LTExIikKYGBgCgpgYGB7cn0KbWR5KCJNYXIgMywgMjAxOSIpCmBgYAojIE9wZXJhdGlvbiBvbiBWZWN0b3JzCmBgYHtyfQphIDwtIGMoMSwgNSwgLTMpCmIgPC0gYygwLjUsIDEyLCAyKQpgYGAKYGBge3J9CmErYgphKmIKcm91bmQoYS9iLCBkaWdpdHMgPSAzKQogYV4yCmElJTIKYGBgCgpgYGB7cn0KYUwgPC0gYygxTCwgNUwsIC0zTCkKYkwgPC0gYygtMkwsIC00TCwgOEwpCmNsYXNzKGFMKQpgYGAKCmBgYHtyfQphK2FMCmNsYXNzKGErYUwpCmFMK2JMCmNsYXNzKGFMK2JMKQpgYGAKYGBge3J9CjQrYQpgYGAKCmBgYHtyfQp0d0RhdGVUaW1lCnR3RGF0ZVRpbWUgKyAxCnR3RGF0ZVRpbWUgKyA4NjQwMApgYGAKYGBge3J9CmRheURpZmYgPC0geW1kKCIyMDE5LTA4LTExIiktIHltZCgiMjAwMC0wMS0wMSIpCmRheURpZmYKY2xhc3MoZGF5RGlmZikKYGBgCgrlm6DngroyMDAw5bm05piv6ZaP5bm0IOaJgOS7pSAxLXllYXIgcGVyaW9kIGFuZCAxLXllYXIgZHVyYXRpb24g5LiN5ZCMCmBgYHtyfQpzdGFydGluZ0RhdGUgPC0geW1kKCIyMDAwLTAyLTE3IikKc3RhcnRpbmdEYXRlICsgeWVhcnMoMSkgI3BlcmlvZApzdGFydGluZ0RhdGUgKyBkeWVhcnMoMSkgI2R1cmF0aW9uCmBgYAoKYGBge3J9CnN0YXJ0aW5nRGF0ZSArIDM2NQpgYGAKCgpgYGB7cn0KeW1kKCIyMDAwLTAyLTAxIikgLT4gc3RhcnRpbmdEYXRlCnltZCgiMjAxOS0wOC0xMSIpIC0+IGVuZGluZ0RhdGUKY2xhc3MoZW5kaW5nRGF0ZSAtIHN0YXJ0aW5nRGF0ZSkKCmBgYAoKIyMgcmVhbGF0aW9uYWwgb3BlcmF0b3IKCmBgYHtyfQp4IDwtIDUKeSA8LSA3Cgp4PT15CnghPXkKYGBgCgpgYGB7cn0KeDIgPC0gYygxLDUsMTApCnkyIDwtIGMoLTEsNSwyMCkKCngyPT15Mgp4MltbMl1dPT15MltbMl1dCmBgYAoKYGBge3J9CngzIDwtIGMoIuWwj+aYjiIsIuWwj+iKsSIpCnkzIDwtIGMoIuWwj+aYjiIsIuWwj+iPryIpCmBgYAoKYGBge3J9CngzWzFdID09IHkzWzFdCngzWzJdICE9IHkzWzJdCmBgYApgYGB7cn0KeDQgPC0gYygxLDUsOCkKeTQgPC0gYyg1LDgpCgp4NCAlaW4lIHk0Cnk0ICVpbiUgeDQKYGBgCgpgYGB7cn0KeDIgPC0gYygxLE5BLDEwKQp5MiA8LSBjKC0xLE5BLDIwKQoKeDMgPC0gYyhOQSwi5bCP6IqxIikKeTMgPC0gYyhOQSwi5bCP6I+vIikKYGBgCgpgYGB7cn0KaXMubmEoeDIpCnN1bSh4MikKc3VtKHgyLCBuYS5ybSA9IFQpCngyICsgMQpgYGAKCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKQpleERhdGEyIDwtIHJlYWRfY3N2KCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2dpdGh1Yi1kYXRhL21hc3Rlci9leERhdGEyLmNzdiIpCmN1cnJlbmN5IDwtIGV4RGF0YTIk5bmj5YilCmBgYAoKYGBge3J9CmFzLmZhY3RvcihjdXJyZW5jeSkgLT4gY3VycmVuY3kKbGV2ZWxzKGN1cnJlbmN5KQpgYGAKCgoK</div>
 
 
 
