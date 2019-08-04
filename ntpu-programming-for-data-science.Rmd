@@ -137,3 +137,65 @@ with_tz(twDateTime, "UTC")
 with_tz(LisbonDateTime, "UTC")
 ```
 
+```{r}
+ymd("2018-09-11")
+```
+
+```{r}
+mdy("Mar 3, 2019")
+```
+# Operation on Vectors
+```{r}
+a <- c(1, 5, -3)
+b <- c(0.5, 12, 2)
+```
+```{r}
+a+b
+a*b
+round(a/b, digits = 3)
+ a^2
+a%%2
+```
+
+```{r}
+aL <- c(1L, 5L, -3L)
+bL <- c(-2L, -4L, 8L)
+class(aL)
+```
+
+```{r}
+a+aL
+class(a+aL)
+aL+bL
+class(aL+bL)
+```
+```{r}
+4+a
+```
+
+```{r}
+twDateTime
+twDateTime + 1
+twDateTime + 86400
+```
+```{r}
+dayDiff <- ymd("2019-08-11")- ymd("2000-01-01")
+dayDiff
+class(dayDiff)
+```
+
+因為2000年是閏年 所以 1-year period and 1-year duration 不同
+```{r}
+startingDate <- ymd("2000-02-17")
+startingDate + years(1) #period
+startingDate + dyears(1) #duration
+```
+```{r}
+ymd("2000-02-01") -> startingDate
+ymd("2019-08-11") -> endingDate
+class(endingDate - startingDate)
+
+```
+
+## realational operator
+

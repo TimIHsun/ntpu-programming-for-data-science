@@ -2086,10 +2086,147 @@ Levels: 法律系 經濟系</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueW1kKFwiMjAxOC0wOS0xMVwiKVxuXG5gYGAifQ== -->
+<pre class="r"><code>ymd(&quot;2018-09-11&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOC0wOS0xMVwiXG4ifQ== -->
+<pre><code>[1] &quot;2018-09-11&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWR5KFwiTWFyIDMsIDIwMTlcIilcblxuYGBgIn0= -->
+<pre class="r"><code>mdy(&quot;Mar 3, 2019&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wMy0yMFwiXG4ifQ== -->
+<pre><code>[1] &quot;2019-03-20&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="operation-on-vectors" class="section level1">
+<h1>Operation on Vectors</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYSlcblxuYGBgIn0= -->
+<pre class="r"><code>class(a)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
+<pre><code>[1] &quot;numeric&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSUlMlxuXG5gYGAifQ== -->
+<pre class="r"><code>a%%2
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMSAxXG4ifQ== -->
+<pre><code>[1] 1 1 1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYUwpXG5cbmBgYCJ9 -->
+<pre class="r"><code>class(aL)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
+<pre><code>[1] &quot;integer&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYUwrYkwpXG5cbmBgYCJ9 -->
+<pre class="r"><code>class(aL+bL)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
+<pre><code>[1] &quot;integer&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNCthXG5cbmBgYCJ9 -->
+<pre class="r"><code>4+a
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDUgOSAxXG4ifQ== -->
+<pre><code>[1] 5 9 1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHdEYXRlVGltZVxuYGBgIn0= -->
+<pre class="r"><code>twDateTime</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wMy0xOCAxNDowNDowMCBDU1RcIlxuIn0= -->
+<pre><code>[1] &quot;2019-03-18 14:04:00 CST&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHdEYXRlVGltZSArIDFcbmBgYCJ9 -->
+<pre class="r"><code>twDateTime + 1</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wMy0xOCAxNDowNDowMSBDU1RcIlxuIn0= -->
+<pre><code>[1] &quot;2019-03-18 14:04:01 CST&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHdEYXRlVGltZSArIDg2NDAwXG5gYGAifQ== -->
+<pre class="r"><code>twDateTime + 86400</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxOS0wMy0xOSAxNDowNDowMCBDU1RcIlxuIn0= -->
+<pre><code>[1] &quot;2019-03-19 14:04:00 CST&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF5RGlmZlxuXG5gYGAifQ== -->
+<pre class="r"><code>dayDiff
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGltZSBkaWZmZXJlbmNlIG9mIDcxNjIgZGF5c1xuIn0= -->
+<pre><code>Time difference of 7162 days</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>因為2000年是閏年 所以 1-year period and 1-year duration 不同</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RhcnRpbmdEYXRlIDwtIHltZChcIjIwMDAtMDItMTdcIilcbnN0YXJ0aW5nRGF0ZSArIHllYXJzKDEpICNwZXJpb2RcbmBgYCJ9 -->
+<pre class="r"><code>startingDate &lt;- ymd(&quot;2000-02-17&quot;)
+startingDate + years(1) #period</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAwMS0wMi0xN1wiXG4ifQ== -->
+<pre><code>[1] &quot;2001-02-17&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RhcnRpbmdEYXRlICsgZHllYXJzKDEpICNkdXJhdGlvblxuYGBgIn0= -->
+<pre class="r"><code>startingDate + dyears(1) #duration</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAwMS0wMi0xNlwiXG4ifQ== -->
+<pre><code>[1] &quot;2001-02-16&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoZW5kaW5nRGF0ZSAtIHN0YXJ0aW5nRGF0ZSlcblxuYGBgIn0= -->
+<pre class="r"><code>class(endingDate - startingDate)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZGlmZnRpbWVcIlxuIn0= -->
+<pre><code>[1] &quot;difftime&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<div id="realational-operator" class="section level2">
+<h2>realational operator</h2>
+<!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAibnRwdS1wcm9ncmFtbWluZy1mb3ItZGF0YS1zY2llbmNlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKTsgbGlicmFyeShkcGx5cik7IGxpYnJhcnkoc3RyaW5ncik7IGxpYnJhcnkobHVicmlkYXRlKQpgYGAKCmBgYHtyfQphIDwtIDIKYGBgCgpgYGB7cn0KYGFgCmBgYApgYGB7cn0KYTIgPC0gNUwKYGBgCgpgYGB7cn0KdHlwZW9mKGEyKQpgYGAKCmBgYHtyfQpjbGFzcyhhMikKYGBgCgpgYGB7cn0KYVZlY3RvcjwtYyg1LDYsNykKYTJWZWN0b3I8LWMoNUwsNkwsN0wpCmNsYXNzKGFWZWN0b3IpCmNsYXNzKGEyVmVjdG9yKQpgYGAKCmBgYHtyfQpkaWFsb2d1ZSA8LSBjKCLlsI/mmI7oqqrvvJon5piO5aSp5LiN55So5LiK6Kqy44CCJyIsCiAgICAgICAgICAgICAgICLlsI/oirHoqqrvvJon55yf55qE5ZeO77yfJyIpCgpjYXQoZGlhbG9ndWUsIHNlcD0iXG4iKQpgYGAKYGBge3J9CnN0dWRlbnRNYWpvcnMgPC0gZmFjdG9yKAogIGMoIue2k+a/n+ezuyIsICLntpPmv5/ns7siLCAi5rOV5b6L57O7IikKKQpgYGAKCmBgYHtyfQpjbGFzcyhzdHVkZW50TWFqb3JzKQpgYGAKYGBge3J9CmxldmVscyhzdHVkZW50TWFqb3JzKQpgYGAKbGV2ZWxz6aGv56S655qE6aGe5Yil5ZCN56ix77yIY2F0ZWdvcmljYWwgdmFsdWVz77yJ6aCG5bqP5pW05pW45YC85Y2zUuecn+ato+WEsuWtmOeahOWFp+WuuToKCuazleW+i+ezu+acg+WtmOaIkDE7IOe2k+a/n+ezu+acg+WtmOaIkDLjgIIKCmBgYHtyfQpzdHVkZW50TWFqb3JzCmBgYAoKYGBge3J9CnR5cGVvZihzdHVkZW50TWFqb3JzKQpgYGAKYGBge3J9CmFzLmludGVnZXIoc3R1ZGVudE1ham9ycykKYGBgCmZhY3RvciAtPiBpbnRlZ2VyIApgYGB7cn0KbnVtYmVyIDwtIGMoMS4yNiwxLjk5LDEyKQpudW1iZXIKYGBgCgpgYGB7cn0KYXMuaW50ZWdlcihudW1iZXIpCmBgYAoKIyBEYXRlIGFuZCBUaW1lCmBgYHtyfQpub3coIlVUQyIpCmBgYApgYGB7cn0KbWR5KCIxLDEsMTk5OSIpCmBgYAoKYGBge3J9CmR0T2JqZWN0VmVjdG9yPC15bWRfaG1zKAogIGMoIjE5NzAtMDEtMDEgMDA6MDI6NTMiLAogICAgIjE5ODAtMDItMTEgMTE6MjU6MjIiKQopCmBgYAoKYGBge3J9CmR0T2JqZWN0VmVjdG9yCmNsYXNzKGR0T2JqZWN0VmVjdG9yKQp0eXBlb2YoZHRPYmplY3RWZWN0b3IpCmBgYApgYGB7cn0KYXMuaW50ZWdlcihkdE9iamVjdFZlY3RvcikKYGBgCmBgYHtyfQphcy5kb3VibGUoZHRPYmplY3RWZWN0b3IpCmBgYApgYGB7cn0KYXMubnVtZXJpYyhkdE9iamVjdFZlY3RvcikKYGBgCgpgYGB7cn0KZHRPYmplY3Q8LXltZF9obXMoIjE5NzAtMDEtMDEgMDA6MDI6NTMiKSAKYGBgCgpgYGB7cn0KU3lzLnRpbWV6b25lKCkKYGBgCmBgYHtyfQp0d0RhdGVUaW1lIDwtIHltZF9obXMoIjIwMTktMDMtMTggMTQ6MDQ6MDAiLCB0ej0iQXNpYS9UYWlwZWkiKQpgYGAKCmBgYHtyfQpjbGFzcyh0d0RhdGVUaW1lKQpgYGAKCmBgYHtyfQp0d0RhdGVUaW1lCmFzLmRvdWJsZSh0d0RhdGVUaW1lKQpgYGAKIyMgR2V0IGRhdGUtdGltZSBpbiBhIGRpZmZlcmVudCB0aW1lIHpvbmUKCmBgYHtyfQpMaXNib25EYXRlVGltZSA8LSB3aXRoX3R6KHR3RGF0ZVRpbWUsdHpvbmU9IkV1cm9wZS9MaXNib24iKQpgYGAKCmBgYHtyfQp3aXRoX3R6KHR3RGF0ZVRpbWUsICJVVEMiKQpgYGAKCmBgYHtyfQp3aXRoX3R6KExpc2JvbkRhdGVUaW1lLCAiVVRDIikKYGBgCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAibnRwdS1wcm9ncmFtbWluZy1mb3ItZGF0YS1zY2llbmNlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKTsgbGlicmFyeShkcGx5cik7IGxpYnJhcnkoc3RyaW5ncik7IGxpYnJhcnkobHVicmlkYXRlKQpgYGAKCmBgYHtyfQphIDwtIDIKYGBgCgpgYGB7cn0KYGFgCmBgYApgYGB7cn0KYTIgPC0gNUwKYGBgCgpgYGB7cn0KdHlwZW9mKGEyKQpgYGAKCmBgYHtyfQpjbGFzcyhhMikKYGBgCgpgYGB7cn0KYVZlY3RvcjwtYyg1LDYsNykKYTJWZWN0b3I8LWMoNUwsNkwsN0wpCmNsYXNzKGFWZWN0b3IpCmNsYXNzKGEyVmVjdG9yKQpgYGAKCmBgYHtyfQpkaWFsb2d1ZSA8LSBjKCLlsI/mmI7oqqrvvJon5piO5aSp5LiN55So5LiK6Kqy44CCJyIsCiAgICAgICAgICAgICAgICLlsI/oirHoqqrvvJon55yf55qE5ZeO77yfJyIpCgpjYXQoZGlhbG9ndWUsIHNlcD0iXG4iKQpgYGAKYGBge3J9CnN0dWRlbnRNYWpvcnMgPC0gZmFjdG9yKAogIGMoIue2k+a/n+ezuyIsICLntpPmv5/ns7siLCAi5rOV5b6L57O7IikKKQpgYGAKCmBgYHtyfQpjbGFzcyhzdHVkZW50TWFqb3JzKQpgYGAKYGBge3J9CmxldmVscyhzdHVkZW50TWFqb3JzKQpgYGAKbGV2ZWxz6aGv56S655qE6aGe5Yil5ZCN56ix77yIY2F0ZWdvcmljYWwgdmFsdWVz77yJ6aCG5bqP5pW05pW45YC85Y2zUuecn+ato+WEsuWtmOeahOWFp+WuuToKCuazleW+i+ezu+acg+WtmOaIkDE7IOe2k+a/n+ezu+acg+WtmOaIkDLjgIIKCmBgYHtyfQpzdHVkZW50TWFqb3JzCmBgYAoKYGBge3J9CnR5cGVvZihzdHVkZW50TWFqb3JzKQpgYGAKYGBge3J9CmFzLmludGVnZXIoc3R1ZGVudE1ham9ycykKYGBgCmZhY3RvciAtPiBpbnRlZ2VyIApgYGB7cn0KbnVtYmVyIDwtIGMoMS4yNiwxLjk5LDEyKQpudW1iZXIKYGBgCgpgYGB7cn0KYXMuaW50ZWdlcihudW1iZXIpCmBgYAoKIyBEYXRlIGFuZCBUaW1lCmBgYHtyfQpub3coIlVUQyIpCmBgYApgYGB7cn0KbWR5KCIxLDEsMTk5OSIpCmBgYAoKYGBge3J9CmR0T2JqZWN0VmVjdG9yPC15bWRfaG1zKAogIGMoIjE5NzAtMDEtMDEgMDA6MDI6NTMiLAogICAgIjE5ODAtMDItMTEgMTE6MjU6MjIiKQopCmBgYAoKYGBge3J9CmR0T2JqZWN0VmVjdG9yCmNsYXNzKGR0T2JqZWN0VmVjdG9yKQp0eXBlb2YoZHRPYmplY3RWZWN0b3IpCmBgYApgYGB7cn0KYXMuaW50ZWdlcihkdE9iamVjdFZlY3RvcikKYGBgCmBgYHtyfQphcy5kb3VibGUoZHRPYmplY3RWZWN0b3IpCmBgYApgYGB7cn0KYXMubnVtZXJpYyhkdE9iamVjdFZlY3RvcikKYGBgCgpgYGB7cn0KZHRPYmplY3Q8LXltZF9obXMoIjE5NzAtMDEtMDEgMDA6MDI6NTMiKSAKYGBgCgpgYGB7cn0KU3lzLnRpbWV6b25lKCkKYGBgCmBgYHtyfQp0d0RhdGVUaW1lIDwtIHltZF9obXMoIjIwMTktMDMtMTggMTQ6MDQ6MDAiLCB0ej0iQXNpYS9UYWlwZWkiKQpgYGAKCmBgYHtyfQpjbGFzcyh0d0RhdGVUaW1lKQpgYGAKCmBgYHtyfQp0d0RhdGVUaW1lCmFzLmRvdWJsZSh0d0RhdGVUaW1lKQpgYGAKIyMgR2V0IGRhdGUtdGltZSBpbiBhIGRpZmZlcmVudCB0aW1lIHpvbmUKCmBgYHtyfQpMaXNib25EYXRlVGltZSA8LSB3aXRoX3R6KHR3RGF0ZVRpbWUsdHpvbmU9IkV1cm9wZS9MaXNib24iKQpgYGAKCmBgYHtyfQp3aXRoX3R6KHR3RGF0ZVRpbWUsICJVVEMiKQpgYGAKCmBgYHtyfQp3aXRoX3R6KExpc2JvbkRhdGVUaW1lLCAiVVRDIikKYGBgCgpgYGB7cn0KeW1kKCIyMDE4LTA5LTExIikKYGBgCgpgYGB7cn0KbWR5KCJNYXIgMywgMjAxOSIpCmBgYAojIE9wZXJhdGlvbiBvbiBWZWN0b3JzCmBgYHtyfQphIDwtIGMoMSwgNSwgLTMpCmIgPC0gYygwLjUsIDEyLCAyKQpgYGAKYGBge3J9CmErYgphKmIKcm91bmQoYS9iLCBkaWdpdHMgPSAzKQogYV4yCmElJTIKYGBgCgpgYGB7cn0KYUwgPC0gYygxTCwgNUwsIC0zTCkKYkwgPC0gYygtMkwsIC00TCwgOEwpCmNsYXNzKGFMKQpgYGAKCmBgYHtyfQphK2FMCmNsYXNzKGErYUwpCmFMK2JMCmNsYXNzKGFMK2JMKQpgYGAKYGBge3J9CjQrYQpgYGAKCmBgYHtyfQp0d0RhdGVUaW1lCnR3RGF0ZVRpbWUgKyAxCnR3RGF0ZVRpbWUgKyA4NjQwMApgYGAKYGBge3J9CmRheURpZmYgPC0geW1kKCIyMDE5LTA4LTExIiktIHltZCgiMjAwMC0wMS0wMSIpCmRheURpZmYKY2xhc3MoZGF5RGlmZikKYGBgCgrlm6DngroyMDAw5bm05piv6ZaP5bm0IOaJgOS7pSAxLXllYXIgcGVyaW9kIGFuZCAxLXllYXIgZHVyYXRpb24g5LiN5ZCMCmBgYHtyfQpzdGFydGluZ0RhdGUgPC0geW1kKCIyMDAwLTAyLTE3IikKc3RhcnRpbmdEYXRlICsgeWVhcnMoMSkgI3BlcmlvZApzdGFydGluZ0RhdGUgKyBkeWVhcnMoMSkgI2R1cmF0aW9uCmBgYApgYGB7cn0KeW1kKCIyMDAwLTAyLTAxIikgLT4gc3RhcnRpbmdEYXRlCnltZCgiMjAxOS0wOC0xMSIpIC0+IGVuZGluZ0RhdGUKY2xhc3MoZW5kaW5nRGF0ZSAtIHN0YXJ0aW5nRGF0ZSkKCmBgYAoKIyMgcmVhbGF0aW9uYWwgb3BlcmF0b3IKCg==</div>
 
 
 
