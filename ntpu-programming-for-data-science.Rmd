@@ -74,7 +74,7 @@ number
 as.integer(number)
 ```
 
-### Date and Time
+# Date and Time
 ```{r}
 now("UTC")
 ```
@@ -108,4 +108,32 @@ as.numeric(dtObjectVector)
 dtObject<-ymd_hms("1970-01-01 00:02:53") 
 ```
 
+```{r}
+Sys.timezone()
+```
+```{r}
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+```
+
+```{r}
+class(twDateTime)
+```
+
+```{r}
+twDateTime
+as.double(twDateTime)
+```
+## Get date-time in a different time zone
+
+```{r}
+LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
+```
+
+```{r}
+with_tz(twDateTime, "UTC")
+```
+
+```{r}
+with_tz(LisbonDateTime, "UTC")
+```
 
