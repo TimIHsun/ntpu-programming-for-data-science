@@ -295,8 +295,11 @@ y5=="女"
 ```
 ```{r}
 (x5 %in% greatTaipei) | (y5=="女")
+which((x5 %in% greatTaipei) | (y5 ==""))
 ```
 
+
+either or （排除同時滿足）
 ```{r}
 xor(x5 %in% greatTaipei, y5=="女")
 ```
@@ -305,7 +308,7 @@ y5
 (y5 == "女")
 which(y5=="女")
 ```
-
+###practice1
 ```{r}
 library(readr)
 exData2 <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/exData2.csv")
@@ -317,9 +320,22 @@ exchangeRate <- exData2$匯率
 ```{r}
 as.Date(date) -> date
 
-sum( date > "1980-08-01")
+sum( date >= "1980-08-01")
 
+sum(currency == "歐元USD/EUR")
 
+sum(is.na(exchangeRate))
 
+sum(!is.na(exchangeRate) & currency == "歐元USD/EUR")
+
+```
+###practice2
+```{r}
+library(readr)
+transcriptDataFinal <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcriptDataFinal.csv")
+courseType <- transcriptDataFinal$`必選修類別（必∕選∕通）`
+major <- transcriptDataFinal$學系
+studentID <- transcriptDataFinal$學號
+grade <- transcriptDataFinal$學期成績
 ```
 
