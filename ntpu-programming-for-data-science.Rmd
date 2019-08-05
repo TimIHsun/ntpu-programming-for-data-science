@@ -339,3 +339,30 @@ studentID <- transcriptDataFinal$學號
 grade <- transcriptDataFinal$學期成績
 ```
 
+```{r}
+levels(as.factor(major)) 
+```
+
+
+```{r}
+sum(major == "經濟學系" )
+
+sum(studentID == "5bdS6977b")
+
+sum(studentID == "5bdS6977b" & grade >= 60)
+
+sum(major == "經濟學系" &courseType =="選")
+
+sum(major == "經濟學系"& courseType == "必" & grade < 60, na.rm = T)-> Econfail
+
+Econfail
+
+sum(major == "經濟學系"& courseType == "必")
+sum(major == "經濟學系"& courseType == "必", na.rm = T)
+
+Econfail / sum(major == "經濟學系"& courseType == "必", na.rm = T) * 100
+
+
+
+```
+
