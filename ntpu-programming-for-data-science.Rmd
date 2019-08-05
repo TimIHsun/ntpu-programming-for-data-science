@@ -264,5 +264,17 @@ as.factor(currency) -> currency
 levels(currency)
 ```
 
+```{r}
+length(levels(currency))
+```
 
+```{r}
+sum(currency == "日圓JPY/USD")
+```
+
+# logical operaor
+
+```{r}
+
+```
 
