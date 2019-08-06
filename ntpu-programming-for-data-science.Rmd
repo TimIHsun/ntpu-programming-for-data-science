@@ -450,3 +450,16 @@ HTTPs <- str_c(HTTP, UserRepo)
 HTTPs
 ```
 
+```{r}
+"https://github.com/tpemartin/107-2-inclass-practice" -> model
+
+str_replace(model, "tpemartin", username)-> step1
+str_replace(answer, "107-2-inclass-practice", reponame)->answer
+
+answer
+```
+
+```{r}
+
+```
+
