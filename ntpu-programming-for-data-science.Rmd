@@ -588,3 +588,20 @@ plasticContainer[["greenBox"]][[1]]
 studentRecord[[4]][[3]]
 ```
 
+```{r}
+plasticContainer[c(1,2)]
+```
+
+```{r}
+extract1 <- plasticContainer[c("greenBox")]
+extract2 <- plasticContainer[[c("greenBox")]]
+
+extract1
+extract2
+```
+```{r}
+extract1[[1]][[1]]
+
+extract2[[1]]
+```
+
