@@ -494,4 +494,97 @@ CYear + 1911 -> CYear
 str_c(CYear,CMonth, sep = "/")-> ADYear
 
 ```
+#Vector
+
+```{r}
+a<-c(1:3)
+typeof(a)
+a
+```
+
+name = value 命名
+```{r}
+aWithNames <- c(
+  a1=1,
+  a2=2,
+  a3=3
+)
+typeof(aWithNames)
+aWithNames
+```
+
+```{r}
+b1 <- list("a", "b", c(1:10))
+b1
+typeof(b1)
+class(b1)
+
+```
+
+```{r}
+b2<-list(
+  第一個="a",
+  第二個="b",
+  第三個=c(1:10))
+b2
+```
+
+```{r}
+b2[["第一個"]]
+```
+
+```{r}
+studentRecord <-
+  list(
+    學號="410073058",
+    姓名="王小明",
+    性別="男",
+    學年平均成績=list(
+      一年級=88,
+      二年級=90.3,
+      三年級=92,
+      四年級=95
+    )
+  )
+
+studentRecord
+```
+
+```{r}
+plasticContainer <- list(
+  greenBox=c("paper","scissor"),     # location 1
+  redBox=c(1,3,2.5),               # location 2
+  blueBox=c(TRUE,FALSE,TRUE,TRUE)    # location 3
+)
+```
+
+```{r}
+plasticContainer[["greenBox"]]
+plasticContainer[[1]]
+plasticContainer$greenBox
+plasticContainer[1]
+```
+
+```{r}
+x <- plasticContainer[["greenBox"]] 
+x[[1]]
+
+plasticContainer[["greenBox"]][[1]]
+```
+
+```{r}
+成績單 <- c(
+  個經=90,
+  總經=77,
+  統計=88
+)
+```
+
+```{r}
+成績單[[1]]
+```
+
+```{r}
+studentRecord[[4]][[3]]
+```
 
