@@ -604,4 +604,64 @@ extract1[[1]][[1]]
 
 extract2[[1]]
 ```
+```{r}
+ length(plasticContainer)
+plasticContainer[c(T,F,T)]
+```
+
+```{r}
+成績單
+成績單[c(FALSE,TRUE,TRUE)]
+```
+
+```{r}
+plasticContainer$greenBox
+```
+
+```{r}
+studentRecord
+```
+
+```{r}
+studentRecord[c(T,F,T,T)][[3]]
+```
+
+```{r}
+class(成績單)
+```
+
+```{r}
+your_github_username <- "TimIHsun"
+your_practice_reponame <- "ntpu-programming-for-data-science"
+library(httr)
+library(stringr)
+str_replace_all(
+  "https://api.github.com/repos/:owner/:repo/commits",
+  c(
+    ":owner"=your_github_username,
+    ":repo"=your_practice_reponame
+    )
+  ) -> commitCheckStatement
+commitCheck <- content(GET(commitCheckStatement))
+```
+
+```{r}
+commitCheckStatement
+```
+
+
+```{r}
+library(readr)
+filmVotingData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/podcastcompetition3.csv")
+str_replace(filmVotingData$請選擇你最喜歡的影片二部,", by"," by") -> favoriteTwo
+birthday <- filmVotingData$`出生西元年月日（驗證本人用）`
+timeStamp <- filmVotingData$Timestamp
+```
+```{r}
+str_length(birthday) == 8 -> logicorrect
+```
+
+```{r}
+
+```
 
