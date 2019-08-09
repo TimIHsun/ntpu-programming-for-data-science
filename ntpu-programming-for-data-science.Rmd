@@ -680,3 +680,37 @@ TimeHour < 18000 -> TimePeriodLogic
 birthday[TimePeriodLogic]
 ```
 
+
+#Data.Frame and Matrix
+```{r}
+Mat1 <- matrix(
+  c(1:6), 2,3
+)
+Mat1
+```
+```{r}
+class(Mat1)
+
+typeof(Mat1)
+```
+
+```{r}
+Mat1[[1]]
+```
+```{r}
+Mat2 <- matrix(
+  c("a","b","c","d"), 2, 2
+)
+Mat2
+```
+
+```{r}
+class(Mat2)
+typeof(Mat2)
+```
+```{r}
+Mat2[[3]]
+
+Mat2[c(T,F,T,F)]
+```
+
