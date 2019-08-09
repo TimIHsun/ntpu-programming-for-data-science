@@ -661,7 +661,22 @@ timeStamp <- filmVotingData$Timestamp
 str_length(birthday) == 8 -> logicorrect
 ```
 
+##以邏輯取樣
+中括號可以以TRUE,FALSE篩選
 ```{r}
+favoriteTwo[logicorrect]-> CorrectedVote
+```
 
+```{r}
+str_sub(timeStamp,12,19)-> TimeHour
+TimeHour
+```
+
+```{r}
+hms(TimeHour)-> TimeHour
+
+TimeHour < 18000 -> TimePeriodLogic
+
+birthday[TimePeriodLogic]
 ```
 
