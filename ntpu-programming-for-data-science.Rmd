@@ -736,3 +736,71 @@ StuDF <- data.frame(
 StuDF 
 ```
 
+```{r}
+StuDF[[2]][[2]]
+```
+
+```{r}
+class(StuList)
+as.data.frame(StuList) -> StuDF3
+
+class(StuDF3)
+StuDF3
+as.data.frame(StuList,stringsAsFactors = F) -> StuDF4
+class(StuDF4)
+StuDF4
+```
+
+```{r}
+class(StuDF)
+typeof(StuDF)
+```
+
+```{r}
+list(1:4,2,2)
+```
+```{r}
+as.data.frame(list(名字=c(1:4),2,2))
+```
+
+#object extraction
+```{r}
+LETTERS # R內設元素值為英文字母群的character vector
+chosenLETTERS <- LETTERS[1:15]
+matObj1 <- matrix(chosenLETTERS,5,3)
+matObj1
+```
+
+```{r}
+class(matObj1)
+typeof(matObj1)
+```
+```{r}
+matObj1[c(F,F,T,F,T),c(F,T,F)]
+```
+
+
+```{r}
+StuDF
+StuDF[c("姓名","成績")] 
+StuDF[1:5,c("姓名","成績")] 
+```
+
+##practice
+```{r}
+library(readr)
+classSurvey <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/classSurvey.csv")
+```
+```{r}
+classSurvey[,c(4,5)]
+```
+
+```{r}
+classSurvey[c("性別","本學期學分數")]
+```
+```{r}
+GenderSelection <- classSurvey$性別=="女"
+
+classSurvey[GenderSelection,]
+```
+
