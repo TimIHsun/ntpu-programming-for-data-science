@@ -1762,9 +1762,42 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
+<p><a href="https://garylkl.shinyapps.io/Chapter4/#section-practice-2" class="uri">https://garylkl.shinyapps.io/Chapter4/#section-practice-2</a></p>
+<p>#practice ##2</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmxpYnJhcnkoc3RyaW5ncilcbmxpYnJhcnkobHVicmlkYXRlKVxuVHlwaG9vbkRhdGEgPC0gcmVhZF9jc3YoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vR2FyeUxLTC9jb3Vyc2UtcHJvZ3JhbW1pbmctZm9yLWRzLVF1aXovbWFzdGVyL1R5cGhvb25EYXRhLmNzdlwiLCBjb2xfdHlwZXMgPSBjb2xzKC5kZWZhdWx0ID0gY29sX2NoYXJhY3RlcigpKSlcblllYXIgPC0gVHlwaG9vbkRhdGEk5bm05Lu9XG5gYGAifQ== -->
+<pre class="r"><code>library(readr)
+library(stringr)
+library(lubridate)
+TyphoonData &lt;- read_csv(&quot;https://raw.githubusercontent.com/GaryLKL/course-programming-for-ds-Quiz/master/TyphoonData.csv&quot;, col_types = cols(.default = col_character()))
+Year &lt;- TyphoonData$年份</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuaW50ZWdlcihZZWFyKS0+IFllYXJcblllYXIgLSAxOTExIC0+WWVhclxuYXMuY2hhcmFjdGVyKFllYXIpLT4gWWVhclxuc3RyX2MoXCLmsJHlnItcIixZZWFyLCBcIuW5tFwiKS0+IFllYXJcbmBgYCJ9 -->
+<pre class="r"><code>as.integer(Year)-&gt; Year
+Year - 1911 -&gt;Year
+as.character(Year)-&gt; Year
+str_c(&quot;民國&quot;,Year, &quot;年&quot;)-&gt; Year</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmxpYnJhcnkoc3RyaW5ncilcblR5cGhvb25EYXRhIDwtIHJlYWRfY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0dhcnlMS0wvY291cnNlLXByb2dyYW1taW5nLWZvci1kcy1RdWl6L21hc3Rlci9UeXBob29uRGF0YS5jc3ZcIiwgY29sX3R5cGVzID0gY29scyguZGVmYXVsdCA9IGNvbF9jaGFyYWN0ZXIoKSkpXG5UaW1lIDwtIFR5cGhvb25EYXRhJOeZvOW4g+itpuWgseaZgumWk1xuYGBgIn0= -->
+<pre class="r"><code>library(readr)
+library(stringr)
+TyphoonData &lt;- read_csv(&quot;https://raw.githubusercontent.com/GaryLKL/course-programming-for-ds-Quiz/master/TyphoonData.csv&quot;, col_types = cols(.default = col_character()))
+Time &lt;- TyphoonData$發布警報時間</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBwcmFjdGljZSBhbmQgZXhhbSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBwcmFjdGljZSBhbmQgZXhhbSIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKaHR0cHM6Ly9nYXJ5bGtsLnNoaW55YXBwcy5pby9DaGFwdGVyNC8jc2VjdGlvbi1wcmFjdGljZS0yCgojcHJhY3RpY2UKIyMyCmBgYHtyfQpsaWJyYXJ5KHJlYWRyKQpsaWJyYXJ5KHN0cmluZ3IpCmxpYnJhcnkobHVicmlkYXRlKQpUeXBob29uRGF0YSA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0dhcnlMS0wvY291cnNlLXByb2dyYW1taW5nLWZvci1kcy1RdWl6L21hc3Rlci9UeXBob29uRGF0YS5jc3YiLCBjb2xfdHlwZXMgPSBjb2xzKC5kZWZhdWx0ID0gY29sX2NoYXJhY3RlcigpKSkKWWVhciA8LSBUeXBob29uRGF0YSTlubTku70KYGBgCgpgYGB7cn0KYXMuaW50ZWdlcihZZWFyKS0+IFllYXIKWWVhciAtIDE5MTEgLT5ZZWFyCmFzLmNoYXJhY3RlcihZZWFyKS0+IFllYXIKc3RyX2MoIuawkeWciyIsWWVhciwgIuW5tCIpLT4gWWVhcgpgYGAKCgpgYGB7cn0KbGlicmFyeShyZWFkcikKbGlicmFyeShzdHJpbmdyKQpUeXBob29uRGF0YSA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0dhcnlMS0wvY291cnNlLXByb2dyYW1taW5nLWZvci1kcy1RdWl6L21hc3Rlci9UeXBob29uRGF0YS5jc3YiLCBjb2xfdHlwZXMgPSBjb2xzKC5kZWZhdWx0ID0gY29sX2NoYXJhY3RlcigpKSkKVGltZSA8LSBUeXBob29uRGF0YSTnmbzluIPorabloLHmmYLplpMKYGBgCgo=</div>
 
 
 
