@@ -121,6 +121,74 @@ sum(
 
 ```
 
+##homework2
+```{r}
+library(lubridate); library(stringr); library(dplyr)
+```
+
+```{r}
+obj11 <- c(
+  小明=55,
+  小新=88,
+  Eric=73
+)
+names(obj11) 
+```
 
 
+```{r}
+names(obj11) <- c("Ming","Shawn","Eric") ### <- 號右側是character vector, 其長度要和names(obj11)相同。
+names(obj11)
+obj11
+```
+
+```{r}
+studentRecord <-
+  list(
+    學號="410073058",
+    姓名="王小明",
+    性別="男",
+    學年平均成績=list(
+      一年級=88,
+      二年級=90.3,
+      三年級=92,
+      四年級=95
+    )
+  )
+```
+
+```{r}
+names(studentRecord)[4] <- "平均成績"
+studentRecord
+
+```
+
+```{r}
+names(studentRecord[[4]]) <- c("一","二","三","四")
+studentRecord
+```
+```{r}
+library(httr)
+commitCheck <- content(GET("https://api.github.com/repos/rstudio/rstudio/commits"))
+```
+
+```{r}
+commit8Date <- commitCheck[[8]][["commit"]][["committer"]][["date"]]
+commit8Date
+```
+```{r}
+commit8TWDate<- with_tz(ymd_hms(commit8Date), tzone = "Asia/Taipei")
+commit8TWDate
+```
+```{r}
+length(commitCheck)
+
+names(commitCheck)<- str_c("commit", c(1:30))
+names(commitCheck)
+```
+
+```{r}
+library(purrr)
+map(commitCheck,~.[[3]][[2]][[3]][[1]]) -> allCommitDatesList
+```
 
