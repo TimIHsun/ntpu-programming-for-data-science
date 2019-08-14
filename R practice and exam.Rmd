@@ -30,3 +30,97 @@ TyphoonData <- read_csv("https://raw.githubusercontent.com/GaryLKL/course-progra
 Time <- TyphoonData$發布警報時間
 ```
 
+```{r}
+str_sub(Time,6,7)-> TyphoonMonth
+table(TyphoonMonth)
+```
+
+
+https://via.hypothes.is/https://tpemartin.github.io/course-107-2-learning-progress/past_homework_exam.html
+#個人學習歷程
+##homework1
+```{r}
+library(lubridate); library(stringr)
+
+```
+
+```{r}
+major <- c("經濟系","法律系","社會系","經濟系")
+grade <- c(50,60,92,88)
+```
+
+```{r}
+fromEcon <- major == "經濟系"
+fromEcon
+```
+
+```{r}
+meanEcon<- sum(fromEcon*grade)/sum(fromEcon)
+```
+
+```{r}
+library(readr)
+podcastcompetition3 <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/podcastcompetition3.csv")
+submitTime <- podcastcompetition3$Timestamp
+head(submitTime)
+```
+```{r}
+submitTime<- mdy_hms(submitTime)
+```
+
+```{r}
+tw_time<- with_tz(submitTime, tzone = "Asia/Taipei")
+```
+
+```{r}
+nightOwl<- 1>= hour(tw_time) & hour(tw_time)<= 6
+
+```
+
+```{r}
+nightOwlVoteShare<- sum(nightOwl)/ length(tw_time)
+
+```
+
+```{r}
+library(readr)
+transcriptDataFinal <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcriptDataFinal.csv")
+studentID <- transcriptDataFinal$學號
+schoolYear <- transcriptDataFinal$學年
+grade <- transcriptDataFinal$學期成績
+credit <- transcriptDataFinal$學分數
+```
+
+```{r}
+GradePass <- grade >= 60
+GradeFail <- grade <60
+earnedCredit<- credit* GradePass
+```
+
+```{r}
+SelectedStu<- studentID == "046S6f645" & schoolYear == 100
+```
+
+```{r}
+credit100ChosenStudent<- sum(credit[SelectedStu])
+```
+
+
+```{r}
+earnedCredit100ChosenStudent<- sum(earnedCredit[SelectedStu])
+
+```
+
+```{r}
+SelectedStu1<- studentID == "046S6f645" & schoolYear == 100 & grade > 0
+
+sum(
+  credit[SelectedStu1]*grade[SelectedStu1]/sum(credit[SelectedStu1])
+  )
+  
+
+```
+
+
+
+
