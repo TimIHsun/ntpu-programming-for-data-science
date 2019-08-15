@@ -236,3 +236,43 @@ transcriptPartialDataEcon <- list(
 transcriptPartialDataEcon
 ```
 
+##homework3
+```{r}
+library(lubridate); library(stringr); library(purrr); library(readr)
+
+```
+
+```{r}
+library(readr)
+finStatement <- read_csv("http://mopsfin.twse.com.tw/opendata/t187ap06_O_ci.csv")
+```
+
+```{r}
+finStatement$`營業利益（損失）` < 0 -> LogicLoss
+
+loss1Companies <- finStatement$公司名稱[LogicLoss]
+
+```
+
+```{r}
+finStatement$`基本每股盈餘（元）` < 0 -> LogicEPS
+
+loss2Companies <- finStatement$公司名稱[LogicEPS]
+
+
+```
+
+```{r}
+LogicLoss & !LogicEPS | !LogicLoss & LogicEPS -> Logic3
+finStatement$公司名稱[Logic3]
+```
+
+```{r}
+xor(LogicEPS,LogicLoss) -> logiOnly1Loss
+finStatement$公司名稱[logiOnly1Loss] -> only1LossCompanies
+only1LossCompanies
+```
+```{r}
+finStatement[logiOnly1Loss,]->subsample
+```
+
