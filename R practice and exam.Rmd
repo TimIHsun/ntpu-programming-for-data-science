@@ -218,8 +218,7 @@ transcriptData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-d
 ```{r}
 variable.names(transcriptData)-> variableNames
 
-logicFromEcon <-transcriptData$學系 = "經濟學系"
-
+transcriptData$學系 == "經濟學系"-> logicFromEcon
 
 ```
 
@@ -228,6 +227,12 @@ transcriptData[c(1,7,8)]-> transcriptPartialData
 ```
 
 ```{r}
-transcriptData[[3]][logicFromEcon]
+transcriptPartialDataEcon <- list(
+  學號=transcriptPartialData$學號[logicFromEcon],
+  學分數=transcriptPartialData$學分數[logicFromEcon],
+  "必選修類別（必∕選∕通）"=transcriptPartialData$`必選修類別（必∕選∕通）`[logicFromEcon]
+)
+
+transcriptPartialDataEcon
 ```
 
