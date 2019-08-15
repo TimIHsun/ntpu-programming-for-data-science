@@ -192,3 +192,42 @@ library(purrr)
 map(commitCheck,~.[[3]][[2]][[3]][[1]]) -> allCommitDatesList
 ```
 
+```{r}
+unlist(allCommitDatesList)-> allCommitDates
+allCommitDates
+```
+
+```{r}
+library(lubridate)
+ymd_hms(allCommitDates)->allCommitDates
+with_tz(allCommitDates, tzone = "Asia/Taipei")->allCommitDatesTW
+```
+
+```{r}
+hour(allCommitDatesTW)-> Hour
+minute(allCommitDatesTW)-> Minute
+hh.mm<- Hour+Minute/60
+logicWithinTimeFrame<- hh.mm >= 4.5 & hh.mm <= 6.5
+```
+
+```{r}
+library(readr)
+transcriptData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcriptDataFinal.csv")
+```
+
+```{r}
+variable.names(transcriptData)-> variableNames
+
+logicFromEcon <-transcriptData$學系 = "經濟學系"
+
+
+```
+
+```{r}
+transcriptData[c(1,7,8)]-> transcriptPartialData
+```
+
+```{r}
+transcriptData[[3]][logicFromEcon]
+```
+
