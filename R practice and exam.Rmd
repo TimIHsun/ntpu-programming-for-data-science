@@ -276,3 +276,41 @@ only1LossCompanies
 finStatement[logiOnly1Loss,]->subsample
 ```
 
+```{r}
+library(httr)
+exhibitionList <- content(GET("https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=6"))
+```
+
+```{r}
+str(exhibitionList[[1]])
+```
+
+```{r}
+length(exhibitionList)-> numExhibitionList
+
+```
+
+```{r}
+df_oneShow <- data.frame(
+  title = exhibitionList[[1]][["title"]],
+  time = exhibitionList[[1]][["showInfo"]][[1]][["time"]],
+  location = exhibitionList[[1]][["showInfo"]][[1]][["location"]],
+  locationName =exhibitionList[[1]][["showInfo"]][[1]][["locationName"]],
+  price = exhibitionList[[1]][["showInfo"]][[1]][["price"]],
+  endTime =exhibitionList[[1]][["showInfo"]][[1]][["endTime"]],
+  sourceWebName = exhibitionList[[1]][["sourceWebName"]],
+  stringsAsFactors = F
+)
+```
+
+```{r}
+df_oneShow
+```
+
+
+#midterm1
+```{r}
+library(lubridate); library(stringr); library(dplyr); library(readr); library(purrr)
+
+```
+
