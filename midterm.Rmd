@@ -175,7 +175,12 @@ names(invoiceList)[2]
 請將每個「訂單時區之下單時間」依其「訂單時區」轉成UTC時間date time class（即POSIXct class）後，存在「UTC時間」對應的位置裡。最後一行請打本題答案物件invoiceList。
 
 ```{r ans62}
-
+ymd_hms(invoiceList$訂單時區之下單時間)-> OrderTime
+invoiceList$訂單時區 == "Asia/Taipei" -> TaipeiLogi
+invoiceList$訂單時區 == "America/New_York" -> NYLogi
+with_tz(OrderTime[TaipeiLogi], tzone = "Asia/Taipei")->OrderTime[TaipeiLogi]
+with_tz(OrderTime[NYLogi], tzone = "America/New_York") -> OrderTime[NYLogi]
+invoiceList$UTC時間 = OrderTime
 # invoiceList 
 ```
 
