@@ -804,3 +804,72 @@ GenderSelection <- classSurvey$性別=="女"
 classSurvey[GenderSelection,]
 ```
 
+#names,colames,rownames
+```{r}
+Vector1 <- letters[1:6]
+Vector1
+
+names(Vector1)
+```
+
+
+```{r}
+names(Vector1) <- c('名稱1','名稱2','名稱3','名稱4','名稱5','名稱6')
+names(Vector1)
+```
+
+```{r}
+StuDF
+```
+
+```{r}
+rownames(StuDF)
+StuDF
+rownames(StuDF)[1] <- c("row1")
+```
+
+#新增.替換
+```{r}
+a <- c("1","b","TRUE")
+a
+a[[2]] <- "c" # 元素存在
+a[[5]] <- "7" # 元素不存在
+a
+```
+
+```{r}
+b <- list(
+  元素1=1,
+  元素2="Hello",
+  元素3=TRUE
+)
+b[[3]] <- F
+b[[5]] <- 7
+b
+```
+```{r}
+b$元素2 <- "Hi"
+b$新成員 <- c(2,5,1)
+b
+```
+
+```{r}
+library(readr)
+exData3 <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/exData3.csv",
+                    col_types = cols(
+                      匯率 = col_number(),
+                      期間 = col_character()))
+```
+
+```{r}
+ymd(exData3$期間) -> exData3$期間
+```
+
+```{r}
+exData3$isAsiaCrisis <- ymd("1997-06-01") <= exData3$期間& 
+  ymd("1998-12-01") >= exData3$期間 
+```
+```{r}
+exData3[exData3$isAsiaCrisis==T,]
+```
+
