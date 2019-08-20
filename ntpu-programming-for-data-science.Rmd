@@ -987,9 +987,16 @@ sum(subSample$學期成績*subSample$學分數)/
 ```{r}
 gpa_fun("d55S6d052")
 ```
+
+
+
+#??????
 ```{r}
 gpa_fun(transcriptDataFinal$學號)
+
 ```
+
+
 ```{r}
 library(stringr)
 sample(99:103,15,replace = T)-> yy
@@ -999,6 +1006,22 @@ str_c("民國",str_pad(yy,3,"left","0"),"年",mm,"月") -> twDates
 
 
 ```{r}
+library(stringr); library(lubridate)
+yyyy<-as.integer(str_extract(twDates,"(?<=(民國))[:digit:]+"))+1911
+mm<-str_extract(twDates,"[:digit:]+(?=月)")
+yyyymmdd <- ymd(str_c(yyyy,mm,"01",sep="-"))
+```
 
+```{r}
+date_convert_twYM <- function(twDates){
+  yyyy<-as.integer(str_extract(twDates,"(?<=(民國))[:digit:]+"))+1911
+mm<-str_extract(twDates,"[:digit:]+(?=月)")
+yyyymmdd <- ymd(str_c(yyyy,mm,"01",sep="-"))
+return(yyyymmdd)
+}
+```
+
+```{r}
+date_convert_twYM(twDates)
 ```
 
