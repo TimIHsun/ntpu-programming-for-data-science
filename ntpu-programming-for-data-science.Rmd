@@ -1082,4 +1082,37 @@ return(yyyymmdd)
 ```{r}
 date_convert_twYM("民國102年12月", 2)
 ```
+```{r}
+norm <- function(x) sqrt(x%*%x)
+norm(1:4)
+```
+##函數程序並不一定要有return與input
+```{r}
+nowAnnounce <- function(){
+  currentDateTime <- Sys.time()
+  hh<-hour(currentDateTime)
+  mm<-minute(currentDateTime)
+  tz<-tz(currentDateTime)
+  cat("現在是",hh,"點",mm,"分",tz)
+}
+```
+
+```{r}
+nowAnnounce()
+```
+```{r}
+browseURL("https://www.ntpu.edu.tw")
+```
+
+```{r}
+textBookURL <- function(){
+  browseURL("https://www.ntpu.edu.tw")
+}
+```
+
+```{r}
+textBookURL()
+```
+
+
 
