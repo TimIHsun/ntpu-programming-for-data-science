@@ -1024,4 +1024,30 @@ return(yyyymmdd)
 ```{r}
 date_convert_twYM(twDates)
 ```
+America/NewYork "1973-02-21 12:05:22"時區轉換成Aisa/Taipei
+```{r}
+ymd_hms("1973-02-21 12:05:22", tz="America/New_York") -> NYTime
+NYTime
+with_tz(NYTime, tzone = "Asia/Taipei")
+```
+想像成function
+("1973-02-21 12:05:22","America/New_York","Asia/Taipei")
+為input
+
+```{r}
+ymd_hms_tzChange <- function(Time,tz1,tz2){
+  ymd_hms("Time", tz="tz1") -> TimeDate
+  with_tz(TimeDate, tzone = "tz2")-> tzChangeDate
+  return(tzChangeDate)
+}
+```
+
+
+```{r}
+ymd_hms_tzChange("1973-02-21 12:05:22","America/New_York","Asia/Taipei")
+```
+```{r}
+c("1973-02-21 12:05:22","1973-02-22 12:05:22")-> Exemple11
+ymd_hms_tzChange(Exemple11, "America/New_York", "Asia/Taipei")
+```
 

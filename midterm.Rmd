@@ -184,6 +184,19 @@ invoiceList$UTC時間 = OrderTime
 # invoiceList 
 ```
 
+```{r}
+ymd_hms_tzChange <- function(Time,tz1,tz2){
+  ymd_hms("Time", tz="tz1") -> TimeDate
+  with_tz(TimeDate, tzone = "tz2")-> tzChangeDate
+  return(tzChangeDate)
+}
+```
+
+```{r}
+ymd_hms_tzChange(
+  invoiceList$訂單時區之下單時間[TaipeiLogi], "Asia/Taipei",
+  "America/New_York"  )
+```
 
 ## 7 成績單 sampledTranscriptData
 
@@ -258,3 +271,6 @@ sum(sampledTranscriptData$學期成績[ChosenStudent] *
 > 答完後，請確認每個code chunk的最後一行皆為該題的答案物件（除非題目有另外規定），且frontmatter的studentID及studentName皆有填寫。
 
 > 注意： 沒有存檔成utf-8格式或frontmatter資訊沒填寫會扣1分。
+
+end a line with 2 spaces   
+in a 
