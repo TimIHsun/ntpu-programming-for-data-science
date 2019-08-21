@@ -1116,3 +1116,101 @@ textBookURL()
 
 
 
+```{r}
+gpa_fun <- function(studentID){
+  transcriptDataFinal$學號==studentID -> logiChosenStudent
+  
+  subSample <- transcriptDataFinal[logiChosenStudent,]
+  
+  sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+  return(GPA)
+}
+```
+
+```{r}
+gpa_fun2 <- function(studentID){
+  transcriptDataFinal$學號==studentID -> logiChosenStudent
+  
+  subSample <- transcriptDataFinal[logiChosenStudent,]
+  
+  sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+  return(
+    list(
+      GPA,
+      subSample
+    )
+  )
+}
+```
+
+```{r}
+gpa_fun2("92aS67fee") -> outputValue
+outputValue$平均成績
+outputValue$成績單
+```
+
+
+```{r}
+gpa_fun2 <- function(studentID){
+  transcriptDataFinal$學號==studentID -> logiChosenStudent
+  
+  subSample <- transcriptDataFinal[logiChosenStudent,]
+  
+  sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+  return(
+    list(
+      平均成績=GPA,
+      成績單=subSample
+      )
+  )
+}
+```
+
+```{r}
+gpa_fun2("92aS67fee") -> outputValue
+outputValue$平均成績
+```
+```{r}
+supply_fun <- function(a,b,P){
+  Qs <- a+b*P
+  return(Qs)
+}
+```
+ 
+```{r}
+demand_fun <- function(c,d,P){
+  Qd <-  c-d*P
+  return(Qd)
+}
+```
+
+
+demand_supply_fun(P,a,b,c,d)
+
+```{r}
+demand_supply_fun <- function(P,a,b,c,d){
+  Qs <-a+b*P
+  Qd <-c-d*P
+  ExcessSupply<- Qs-Qd
+  return(
+    list(
+      供給量=Qs,
+      需求量=Qd,
+      超額供給=ExcessSupply
+    )
+  )
+}
+```
+
+```{r}
+demand_supply_fun(2,1,1,1,0.5)
+```
+
+#依條件執行
+```{r}
+
+```
+
