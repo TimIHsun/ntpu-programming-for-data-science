@@ -1050,4 +1050,36 @@ ymd_hms_tzChange("1973-02-21 12:05:22","America/New_York","Asia/Taipei")
 c("1973-02-21 12:05:22","1973-02-22 12:05:22")-> Exemple11
 ymd_hms_tzChange(Exemple11, "America/New_York", "Asia/Taipei")
 ```
+```{r}
+utility_cobb_douglass2 <- function(x,y,.alpha=0.5,.beta=0.5){
+  utilValue <- x^.alpha*y^.beta
+  return(utilValue)
+}
+```
+
+
+```{r}
+utility_cobb_douglass2(1,2) # 使用預設值
+utility_cobb_douglass2(1,2,0.5,0.8) # 自定參數值
+```
+
+```{r}
+library(stringr); library(lubridate)
+yyyy<-as.integer(str_extract(twDates,"(?<=(民國))[:digit:]+"))+1911
+mm<-str_extract(twDates,"[:digit:]+(?=月)")
+yyyymmdd <- ymd(str_c(yyyy,mm,"01",sep="-"))
+```
+
+```{r}
+date_convert_twYM <- function(twDates, d = 1){
+  yyyy<-as.integer(str_extract(twDates,"(?<=(民國))[:digit:]+"))+1911
+mm<-str_extract(twDates,"[:digit:]+(?=月)")
+yyyymmdd <- ymd(str_c(yyyy,mm,d,sep="-"))
+return(yyyymmdd)
+}
+```
+
+```{r}
+date_convert_twYM("民國102年12月", 2)
+```
 
