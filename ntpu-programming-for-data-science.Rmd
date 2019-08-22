@@ -1211,6 +1211,22 @@ demand_supply_fun(2,1,1,1,0.5)
 
 #依條件執行
 ```{r}
+a <- readline(prompt = "請輸入一個數字： ")
+if(a < 0) {
+  print("a為負值")
+}
+```
 
+```{r}
+supply_fun <- function(a,b,P){
+  Qs <- a+b*P
+  if(P>0){
+    return(Qs)
+  }
+}
+```
+
+```{r}
+supply_fun(1,1,-1)
 ```
 
