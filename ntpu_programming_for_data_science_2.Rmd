@@ -1,0 +1,363 @@
+---
+title: "ntpu_programming_for_data_science-2"
+output: html_notebook
+---
+
+#setup
+
+```{r}
+library(readr); library(dplyr); library(stringr); library(lubridate)
+```
+
+#Function and Conditional Execution
+
+```{r}
+utility_cobb_douglass <- function(x,y,.alpha,.beta){
+  utilValue <- x^.alpha*y^.beta # 程序產生output值
+  return(utilValue) # 傳回output值
+}
+```
+```{r}
+class(utility_cobb_douglass)
+```
+```{r}
+utility_cobb_douglass(1,2,0.5,0.5)
+```
+```{r}
+functionExemple <- function(x, alpha){
+  return(x+alpha)
+}
+```
+```{r}
+functionExemple(1,1111)
+```
+ 
+```{r}
+supply_fun <- function(a,b,P){
+  Qs <- a+b*P
+  return(Qs)
+}
+```
+ 
+```{r}
+demand_fun <- function(c,d,P){
+  Qd <-  c-d*P
+  return(Qd)
+}
+```
+
+```{r}
+demand_fun(5,1,1) - supply_fun(0,1,1)
+```
+```{r}
+library(readr)
+transcriptDataFinal <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcriptDataFinal.csv")
+```
+
+Input = studentID , Output = GPA
+```{r}
+studentID <-"92aS67fee" 
+transcriptDataFinal$學號==studentID -> logiChosenStudent
+
+subSample <- transcriptDataFinal[logiChosenStudent,]
+
+sum(subSample$學期成績*subSample$學分數)/
+  sum(subSample$學分數) -> GPA
+GPA
+```
+
+```{r}
+gpa_fun <- function(studentID){
+  transcriptDataFinal$學號==studentID -> logiChosenStudent
+
+subSample <- transcriptDataFinal[logiChosenStudent,]
+
+sum(subSample$學期成績*subSample$學分數)/
+  sum(subSample$學分數) -> GPA
+  return(GPA)
+}
+```
+
+```{r}
+gpa_fun("d55S6d052")
+```
+
+
+
+#??????
+```{r}
+gpa_fun(transcriptDataFinal$學號)
+
+```
+
+
+```{r}
+library(stringr)
+sample(99:103,15,replace = T)-> yy
+sample(1:12,15,replace=T)-> mm
+str_c("民國",str_pad(yy,3,"left","0"),"年",mm,"月") -> twDates
+```
+
+
+```{r}
+library(stringr); library(lubridate)
+yyyy<-as.integer(str_extract(twDates,"(?<=(民國))[:digit:]+"))+1911
+mm<-str_extract(twDates,"[:digit:]+(?=月)")
+yyyymmdd <- ymd(str_c(yyyy,mm,"01",sep="-"))
+```
+
+```{r}
+date_convert_twYM <- function(twDates){
+  yyyy<-as.integer(str_extract(twDates,"(?<=(民國))[:digit:]+"))+1911
+mm<-str_extract(twDates,"[:digit:]+(?=月)")
+yyyymmdd <- ymd(str_c(yyyy,mm,"01",sep="-"))
+return(yyyymmdd)
+}
+```
+
+```{r}
+date_convert_twYM(twDates)
+```
+America/NewYork "1973-02-21 12:05:22"時區轉換成Aisa/Taipei
+```{r}
+ymd_hms("1973-02-21 12:05:22", tz="America/New_York") -> NYTime
+NYTime
+with_tz(NYTime, tzone = "Asia/Taipei")
+```
+想像成function
+("1973-02-21 12:05:22","America/New_York","Asia/Taipei")
+為input
+
+```{r}
+ymd_hms_tzChange <- function(Time,tz1,tz2){
+  ymd_hms("Time", tz="tz1") -> TimeDate
+  with_tz(TimeDate, tzone = "tz2")-> tzChangeDate
+  return(tzChangeDate)
+}
+```
+
+
+```{r}
+ymd_hms_tzChange("1973-02-21 12:05:22","America/New_York","Asia/Taipei")
+```
+```{r}
+c("1973-02-21 12:05:22","1973-02-22 12:05:22")-> Exemple11
+ymd_hms_tzChange(Exemple11, "America/New_York", "Asia/Taipei")
+```
+```{r}
+utility_cobb_douglass2 <- function(x,y,.alpha=0.5,.beta=0.5){
+  utilValue <- x^.alpha*y^.beta
+  return(utilValue)
+}
+```
+
+
+```{r}
+utility_cobb_douglass2(1,2) # 使用預設值
+utility_cobb_douglass2(1,2,0.5,0.8) # 自定參數值
+```
+
+```{r}
+library(stringr); library(lubridate)
+yyyy<-as.integer(str_extract(twDates,"(?<=(民國))[:digit:]+"))+1911
+mm<-str_extract(twDates,"[:digit:]+(?=月)")
+yyyymmdd <- ymd(str_c(yyyy,mm,"01",sep="-"))
+```
+
+```{r}
+date_convert_twYM <- function(twDates, d = 1){
+  yyyy<-as.integer(str_extract(twDates,"(?<=(民國))[:digit:]+"))+1911
+mm<-str_extract(twDates,"[:digit:]+(?=月)")
+yyyymmdd <- ymd(str_c(yyyy,mm,d,sep="-"))
+return(yyyymmdd)
+}
+```
+
+```{r}
+date_convert_twYM("民國102年12月", 2)
+```
+```{r}
+norm <- function(x) sqrt(x%*%x)
+norm(1:4)
+```
+##函數程序並不一定要有return與input
+```{r}
+nowAnnounce <- function(){
+  currentDateTime <- Sys.time()
+  hh<-hour(currentDateTime)
+  mm<-minute(currentDateTime)
+  tz<-tz(currentDateTime)
+  cat("現在是",hh,"點",mm,"分",tz)
+}
+```
+
+```{r}
+nowAnnounce()
+```
+```{r}
+browseURL("https://www.ntpu.edu.tw")
+```
+
+```{r}
+textBookURL <- function(){
+  browseURL("https://www.ntpu.edu.tw")
+}
+```
+
+```{r}
+textBookURL()
+```
+
+
+
+```{r}
+gpa_fun <- function(studentID){
+  transcriptDataFinal$學號==studentID -> logiChosenStudent
+  
+  subSample <- transcriptDataFinal[logiChosenStudent,]
+  
+  sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+  return(GPA)
+}
+```
+
+```{r}
+gpa_fun2 <- function(studentID){
+  transcriptDataFinal$學號==studentID -> logiChosenStudent
+  
+  subSample <- transcriptDataFinal[logiChosenStudent,]
+  
+  sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+  return(
+    list(
+      GPA,
+      subSample
+    )
+  )
+}
+```
+
+```{r}
+gpa_fun2("92aS67fee") -> outputValue
+outputValue$平均成績
+outputValue$成績單
+```
+
+
+```{r}
+gpa_fun2 <- function(studentID){
+  transcriptDataFinal$學號==studentID -> logiChosenStudent
+  
+  subSample <- transcriptDataFinal[logiChosenStudent,]
+  
+  sum(subSample$學期成績*subSample$學分數)/
+    sum(subSample$學分數) -> GPA
+  return(
+    list(
+      平均成績=GPA,
+      成績單=subSample
+      )
+  )
+}
+```
+
+```{r}
+gpa_fun2("92aS67fee") -> outputValue
+outputValue$平均成績
+```
+```{r}
+supply_fun <- function(a,b,P){
+  Qs <- a+b*P
+  return(Qs)
+}
+```
+ 
+```{r}
+demand_fun <- function(c,d,P){
+  Qd <-  c-d*P
+  return(Qd)
+}
+```
+
+
+demand_supply_fun(P,a,b,c,d)
+
+```{r}
+demand_supply_fun <- function(P,a,b,c,d){
+  Qs <-a+b*P
+  Qd <-c-d*P
+  ExcessSupply<- Qs-Qd
+  return(
+    list(
+      供給量=Qs,
+      需求量=Qd,
+      超額供給=ExcessSupply
+    )
+  )
+}
+```
+
+```{r}
+demand_supply_fun(2,1,1,1,0.5)
+```
+
+#依條件執行
+
+
+```{r}
+supply_fun <- function(a,b,P){
+  Qs <- a+b*P
+  if(P>0){
+    return(Qs)
+  }
+}
+```
+
+```{r}
+supply_fun(1,1,-1)
+```
+
+
+
+```{r}
+supply_fun2 <- function(P,a,b){
+  Qs <- a+b*P
+  if(P>=0) {
+    return(Qs)
+  }
+}
+supply_fun2(P=-1,0,1)
+supply_fun2(P=2,0,1)
+```
+
+```{r}
+supply_fun3 <- function(P,a,b){
+  Qs <- a+b*P
+  if(P < 0) {
+    message("P不能為負值") # 在螢幕出現的「錯誤」提示，沒有輸出任何值
+  } else {
+    return(Qs)
+  }
+}
+supply_fun3(P=-1,0,1)
+supply_fun3(P=2,0,1)
+```
+
+```{r}
+supply_fun4 <- function(P,a,b){
+  Qs <- a+b*P
+  if(P < 0) {
+    message("P不能為負值") # 在螢幕出現的「錯誤」提示，沒有輸出任何值
+  } else if(P < -a/b) {
+    message("P必需大於等於",-a/b,"(即-a/b值)")
+  } else {
+    return(Qs)
+  }
+}
+supply_fun4(P=-1,-3,1)
+supply_fun4(P=2,-3,1)
+supply_fun4(P=3,-3,1)
+```
+
