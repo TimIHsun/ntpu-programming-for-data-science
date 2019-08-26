@@ -499,17 +499,17 @@ GmailFun<-function(i){
   "gmail.com" %in% i -> GmailLogi 
   if(GmailLogi == F){
   print(str_c(i,"@gmail.com"))
-}else{
+}else if(GmailLogi == F){
   return(i)
 }}
 ```
 
 ```{r}
-GmailFun(i="abc")
+GmailFun(i="abc@gmail.com")
 ```
 ```{r}
-for(i in gmailAdress){
-  print(GmailFun(gmailAddress))
+for(i in gmailAddress){
+  GmailFun(i)
 }
 ```
 
