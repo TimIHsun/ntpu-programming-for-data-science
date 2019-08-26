@@ -434,3 +434,94 @@ a <- 4
 testfun(2)
 ```
 
+#Sequence
+```{r}
+sequence_source <- c("A","B","C")
+length(sequence_source)
+```
+
+```{r}
+load(url("https://www.dropbox.com/s/duh5aaqgl2f5m3z/loopTranscriptData.Rda?raw=1"))
+studentIds <- unique(transcriptDataFinal$學號) # 全部可能學號
+studentIds5 <- studentIds[1:5] # 前5筆學號
+```
+
+```{r}
+for (i in studentIds5){
+  print(i)
+  }
+
+for(i in seq_along(studentIds5)){
+  print(i)
+}
+```
+作法一
+```{r}
+for (i in studentIds5) {
+  gpa_fun(i)->output
+  print(output)  
+}
+```
+作法二
+```{r}
+for (i in c(1:5)){
+  print(gpa_fun(studentIds5[[i]]))
+}
+```
+作法三
+```{r}
+for (i in seq_along(studentIds5)) {
+  
+  print(gpa_fun(studentIds5[[i]]))
+  
+}
+```
+
+```{r}
+seq_along(studentIds5)
+```
+
+```{r}
+gmailAddress <- c(
+  "tim@gmail.com",
+  "anita",
+  "yellen@gmail.com",
+  "huang@gmail.com"
+)
+```
+
+
+```{r}
+i <- "tim@gmail.com"
+"gmail.com" %in% i -> GmailLogi
+
+GmailFun<-function(i){
+  "gmail.com" %in% i -> GmailLogi 
+  if(GmailLogi == F){
+  print(str_c(i,"@gmail.com"))
+}else{
+  return(i)
+}}
+```
+
+```{r}
+GmailFun(i="abc")
+```
+```{r}
+for(i in gmailAdress){
+  print(GmailFun(gmailAddress))
+}
+```
+
+
+```{r}
+for(i in seq_along(gmailAdress)){
+  print(GmailFun(gmailAddress[[i]]))
+}
+```
+
+```{r}
+seq_along(gmailAddress)
+```
+
+
