@@ -481,6 +481,8 @@ for (i in seq_along(studentIds5)) {
 seq_along(studentIds5)
 ```
 
+##practice
+
 ```{r}
 gmailAddress <- c(
   "tim@gmail.com",
@@ -492,36 +494,34 @@ gmailAddress <- c(
 
 
 ```{r}
-i <- "tim@gmail.com"
-"gmail.com" %in% i -> GmailLogi
-
-GmailFun<-function(i){
-  "gmail.com" %in% i -> GmailLogi 
-  if(GmailLogi == F){
-  print(str_c(i,"@gmail.com"))
-}else if(GmailLogi == F){
-  return(i)
-}}
+i <- 2
+str_detect(gmailAddress[[i]], "@gmail.com")->detectLogi
+if(detectLogi == T){
+  print(gmailAddress[[i]])
+}else {
+  print(str_c(gmailAddress[[i]],"@gmail.com"))
+}
 ```
 
 ```{r}
-GmailFun(i="abc@gmail.com")
+for(i in seq_along(gmailAddress)){
+  str_detect(gmailAddress[[i]], "@gmail.com")->detectLogi
+  if(detectLogi == T){
+  print(gmailAddress[[i]])
+  }else {
+  print(str_c(gmailAddress[[i]],"@gmail.com"))
+}
+}
 ```
+
+
 ```{r}
 for(i in gmailAddress){
-  GmailFun(i)
+  str_detect(i, "@gmail.com")->detectLogi
+  if(detectLogi == T){
+  print(i)
+  }else {
+  print(str_c(i,"@gmail.com"))
+}
 }
 ```
-
-
-```{r}
-for(i in seq_along(gmailAdress)){
-  print(GmailFun(gmailAddress[[i]]))
-}
-```
-
-```{r}
-seq_along(gmailAddress)
-```
-
-
