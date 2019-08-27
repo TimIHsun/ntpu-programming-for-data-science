@@ -585,4 +585,117 @@ for(i in seq_along(commitHistory)){
 }
 }
 ```
+#output
+```{r}
+saveCharacter <- vector("character",5)
+saveCharacter
+
+saveNumeric <- vector("numeric",5)
+saveNumeric
+
+saveLogical <- vector("logical",5)
+saveLogical
+
+saveList <- vector("list",5)
+saveList
+```
+
+```{r}
+studentIds <- unique(transcriptDataFinal$學號) # 全部可能學號
+studentIds5 <- studentIds[1:5] # 前5筆學號
+```
+
+
+```{r}
+saveGPA <- vector("numeric", length(studentIds))
+
+gpa_fun(studentIds[[2]])-> saveGPA[[2]]
+```
+
+```{r}
+for(i in seq_along(studentIds)){
+  gpa_fun(studentIds[[i]])-> saveGPA[[i]]
+}
+```
+
+```{r}
+head(saveGPA)
+```
+
+
+```{r}
+saveGPAsWithNames <- saveGPA
+names(saveGPAsWithNames) <- studentIds
+
+saveGPA[1:5] # 元素沒有名字
+
+saveGPAsWithNames[1:5] # 元素有名字
+```
+
+```{r}
+saveGPAsWithNames[["92aS67fee"]]
+```
+##saving container practice
+```{r}
+load(url("https://www.dropbox.com/s/qnz9paigf61yjus/commitHistory.Rda?raw=1"))
+```
+
+```{r}
+saveAuthor <- vector("character",length(commitHistory))
+i <- 1
+commitHistory[[i]][["commit"]][["author"]][["name"]]-> saveAuthor[[1]]
+```
+
+##mission1
+```{r}
+saveAuthor <- vector("character",length(commitHistory))
+for(i in seq_along(commitHistory)){
+  commitHistory[[i]][["commit"]][["author"]][["name"]]-> saveAuthor[[i]]
+}
+
+saveAuthor
+```
+##mission2
+```{r}
+saveCommiter <- vector("character", length(commitHistory))
+
+i <- 2
+commitHistory[[i]][["commit"]][["committer"]][["name"]]-> saveCommiter[[i]]
+saveCommiter
+```
+
+```{r}
+saveCommiter <- vector("character", length(commitHistory))
+for(i in seq_along(commitHistory)){
+  commitHistory[[i]][["commit"]][["committer"]][["name"]]-> saveCommiter[[i]]
+}
+```
+
+```{r}
+saveCommiter
+```
+##mission3-1
+```{r}
+saveAuthor == saveCommiter -> AuthorCommiterLogi
+```
+
+```{r}
+commitHistory[AuthorCommiterLogi] -> matchedCommit
+```
+
+```{r}
+saveCommitDate <- vector("character", length(matchedCommit))
+
+i <- 1
+commitHistory[[i]][["commit"]][["committer"]][["date"]]-> saveCommitDate[[i]]
+```
+```{r}
+for(i in seq_along(matchedCommit)){
+  commitHistory[[i]][["commit"]][["committer"]][["date"]]-> saveCommitDate[[i]]
+}
+```
+
+```{r}
+ymd_hms(saveCommitDate)-> saveCommitDate
+```
 
