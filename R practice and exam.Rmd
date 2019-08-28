@@ -350,8 +350,61 @@ df_allShows$sourceWebName=="全國藝文活動資訊系統" -> logiIndex
 sum(logiIndex) -> totalCount1
 ```
 
-#homework4
+##homework4
 ```{r}
-
+library(lubridate); library(stringr); library(purrr); library(readr);
 ```
+
+```{r}
+library(httr) 
+#commitHistory <- content(GET("https://api.github.com/repos/r-hub/cranlogs/commits"))
+load(url("https://www.dropbox.com/s/qnz9paigf61yjus/commitHistory.Rda?raw=1"))
+```
+
+```{r}
+commitHistory[[10]] -> oneCommitRecord
+```
+
+```{r}
+df_commit <- data.frame(
+  author = oneCommitRecord$commit$author$name,
+  commiter = oneCommitRecord$commit$committer$name,
+  commitDate = oneCommitRecord$commit$committer$date,
+  sha = oneCommitRecord$sha,
+  stringsAsFactors = F
+)
+```
+
+```{r}
+commit_df_fun <- function(oneCommitRecord){
+  df_commit <- data.frame(
+  author = oneCommitRecord$commit$author$name,
+  commiter = oneCommitRecord$commit$committer$name,
+  commitDate = oneCommitRecord$commit$committer$date,
+  sha = oneCommitRecord$sha,
+  stringsAsFactors = F
+)
+ return(df_commit) 
+}
+```
+
+```{r}
+df_allCommits <- map_dfr(commitHistory,commit_df_fun)
+```
+
+```{r}
+df_allCommits$author == df_allCommits$commiter -> df_allCommits$samePerson
+```
+
+```{r}
+names(df_allCommits[5]) <- "1"
+```
+```{r}
+class(df_allCommits)
+```
+
+```{r}
+names(df_allCommits[5])
+```
+
 
