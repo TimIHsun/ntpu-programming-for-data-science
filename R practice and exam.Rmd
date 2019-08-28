@@ -450,3 +450,35 @@ df_validCommits[df_validCommits$validCommits,] -> df_validCommitsSubsample
 ```{r}
 length(unique(df_validCommitsSubsample$date)) -> validCount
 ```
+
+```{r}
+valid_commit_count <- function(username,reponame,wday,startHour,endHour){
+  str_c(
+    "https://api.github.com/repos",username,reponame,"commits", sep = "/"
+        )->GetCommits
+    
+  
+  commitHistory <- content(GET(GetCommits)) ### 想辦法由username,reponame input產生合理的...
+  
+  ### 接著依順序貼下先前完成的以下步驟，便可得到validCounts成為output
+  map_dfr(commitHistory,commit_df_fun) -> df_allCommits
+  df_allCommits$samePerson <- df_allCommits$author == df_allCommits$committer
+  df_allCommits[df_allCommits$samePerson,] -> df_validCommits
+  df_validCommits$commitDate <- ymd_hms(df_validCommits$commitDate)
+  df_validCommits$commitDate <- with_tz(df_validCommits$commitDate,
+                                      tzone="Asia/Taipei")
+  df_validCommits$hh <- hour(df_validCommits$commitDate)
+  df_validCommits$date <- date(df_validCommits$commitDate)
+  df_validCommits$weekday <- wday(df_validCommits$commitDate) 
+  df_validCommits$validCommit <- (df_validCommits$weekday == wday &
+                                   df_validCommits$hh >=startHour &
+                                   df_validCommits$hh <=endHour )
+  df_validCommits[df_validCommits$validCommit,c("date","weekday","hh")] -> df_validCommitsSubsample
+  unique(df_validCommitsSubsample[,c("date")]) -> unique_df
+  length(unique_df) -> validCounts
+  return(validCounts)
+}
+
+```
+
+
