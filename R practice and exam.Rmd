@@ -447,3 +447,6 @@ sum(df_validCommits$validCommit)
 df_validCommits[df_validCommits$validCommits,] -> df_validCommitsSubsample
 ```
 
+```{r}
+length(unique(df_validCommitsSubsample$date)) -> validCount
+```
