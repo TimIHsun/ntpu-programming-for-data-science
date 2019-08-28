@@ -397,8 +397,9 @@ df_allCommits$author == df_allCommits$commiter -> df_allCommits$samePerson
 ```
 
 ```{r}
-names(df_allCommits[5]) <- "1"
+names(df_allCommits)[5] <- "samePerson"
 ```
+
 ```{r}
 class(df_allCommits)
 ```
@@ -407,4 +408,42 @@ class(df_allCommits)
 names(df_allCommits[5])
 ```
 
+```{r}
+df_allCommits[df_allCommits$samePerson,] -> df_validCommits
+```
+
+```{r}
+with_tz(ymd_hms(df_validCommits$commitDate), tzone = "Asia/Taipei") ->df_validCommits$commitDate 
+```
+
+```{r}
+hour(df_validCommits$commitDate) -> df_validCommits$hh
+
+```
+
+```{r}
+date(df_validCommits$commitDate) -> df_validCommits$date
+```
+
+```{r}
+wday(df_validCommits$commitDate) -> df_validCommits$weekday
+```
+
+```{r}
+df_validCommits$validCommits <- df_validCommits$weekday%in% c(2:4) &
+  df_validCommits$hh%in%c(12:23)
+sum(df_validCommits$validCommits)
+```
+
+
+```{r}
+df_validCommits$validCommit <- (df_validCommits$weekday %in% c(2:4) &
+                                 df_validCommits$hh >=12 &
+                                 df_validCommits$hh <=23 )
+sum(df_validCommits$validCommit)
+```
+
+```{r}
+df_validCommits[df_validCommits$validCommits,] -> df_validCommitsSubsample
+```
 
