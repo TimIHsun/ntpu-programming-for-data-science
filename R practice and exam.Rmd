@@ -307,12 +307,51 @@ df_oneShow <- data.frame(
 df_oneShow
 ```
 
-
-#midterm1
 ```{r}
-library(lubridate); library(stringr); library(dplyr); library(readr); library(purrr)
+dataframe_show_info <- function(exhibitionInput){
 
+  df_oneShow <- data.frame(
+  title=exhibitionInput$title,
+  time=exhibitionInput$showInfo[[1]]$time,
+  location=exhibitionInput$showInfo[[1]]$location,
+  locationName=exhibitionInput$showInfo[[1]]$locationName,
+  price=exhibitionInput$showInfo[[1]]$price,
+  endTime=exhibitionInput$showInfo[[1]]$endTime,
+  sourceWebName=exhibitionInput$sourceWebName,
+  stringsAsFactors = F
+)
+return(df_oneShow)
+}
 ```
 
+```{r}
+dataframe_show_info
+```
+```{r}
+dataframe_show_info(exhibitionList[[3]])
+```
 
+```{r}
+library(purrr)
+map_dfr(exhibitionList,dataframe_show_info) -> df_allShows
+```
+
+```{r}
+as.factor(df_allShows$sourceWebName)-> df_allShows$sourceWebName
+levels(df_allShows$sourceWebName)
+```
+
+```{r}
+sum(str_detect(df_allShows$sourceWebName,"全國藝文活動資訊系統"))-> totalcount
+```
+
+```{r}
+df_allShows$sourceWebName=="全國藝文活動資訊系統" -> logiIndex
+sum(logiIndex) -> totalCount1
+```
+
+#homework4
+```{r}
+
+```
 
