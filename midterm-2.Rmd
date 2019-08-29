@@ -1,0 +1,65 @@
+---
+title: "midterm-2"
+output: html_notebook
+---
+
+```{r}
+library(lubridate); library(stringr); library(purrr); library(readr);
+```
+#1.1
+```{r}
+homeworkData <- data.frame(
+  姓名 = c("小明","小花","小新"),
+  作業1分數 = c(10,9,5),
+  作業2分數 = c(10,10,9),
+  stringsAsFactors = F
+)
+```
+
+#1.2
+emailText <-
+  "親愛的student好，您的作業成績為：作業1, y1分; 作業2, y2分"
+```{r}
+email_content_fun <- function(input){
+  emailText <- str_c("親愛的student好，您的作業成績為：","作業1,",input["作業1分數"],
+                     ",作業2,",input["作業2分數"])
+  return(emailText)
+}
+```
+
+```{r}
+email_content_fun(homeworkData[3,])
+```
+##MTanswer
+```{r}
+email_content_fun1 <- function(input){
+  emailText <-
+  "親愛的student好，您的作業成績為：作業1, y1分; 作業2, y2分"
+  str_replace(emailText, "student", input$姓名) -> emailTextOut
+  str_replace(emailTextOut,"y1", as.character(input$作業1分數)) -> emailTextOut
+  str_replace(emailTextOut,"y2", as.character(input$作業2分數)) -> emailTextOut
+  return(emailTextOut)
+}
+
+
+```
+
+```{r}
+email_content_fun1(homeworkData[1,])
+```
+```{r}
+homeworkData[1,]$姓名
+```
+
+```{r}
+str_smallClosest <- function(chrNumber,criticalNumber){
+  as.numeric(chrNumber) -> NumchrNumber
+  NumchrNumber <= criticalNumber -> MaxLogi
+  max(chrNumber[MaxLogi]) -> AnsMax
+  print(AnsMax)
+  } 
+```
+
+
+
+
