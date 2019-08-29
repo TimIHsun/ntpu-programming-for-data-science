@@ -1909,14 +1909,86 @@ $`107`$url
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRWNvbkNvdXJzZVNlbGVjdGlvbkluZm9bW1wiMTAxXCJdXSR1cmxcbmBgYCJ9 -->
 <pre class="r"><code>EconCourseSelectionInfo[[&quot;101&quot;]]$url</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaHR0cDovL3d3dy5lY29uLm50cHUuZWR1LnR3L2Vjb24vZmlsZXMvV2F5LzIwMTYwNzIxOTUwMjEuZG9jXCJcbiJ9 -->
-<pre><code>[1] &quot;http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195021.doc&quot;</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#4</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG9hZCh1cmwoXCJodHRwczovL3d3dy5kcm9wYm94LmNvbS9zL21rMnptY2Myd2prd2Y3dy9pbnZvaWNlTGlzdC5SZGE/cmF3PXRydWVcIikpXG5jKCfoqILllq7mmYLljYAnLCfoqILllq7mmYLplpMo5Lul6KiC5Zau5pmC5Y2A6aGv56S6KScsJ1VUQ+aZgumWkycpIC0+IG5hbWVzKGludm9pY2VMaXN0KVxuYGBgIn0= -->
+<pre class="r"><code>load(url(&quot;https://www.dropbox.com/s/mk2zmcc2wjkwf7w/invoiceList.Rda?raw=true&quot;))
+c('訂單時區','訂單時間(以訂單時區顯示)','UTC時間') -&gt; names(invoiceList)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaSA8LSAxXG53aXRoX3R6KFxuICAgIHltZF9obXMoaW52b2ljZUxpc3QkYOioguWWruaZgumWkyjku6XoqILllq7mmYLljYDpoa/npLopYFtbaV1dLCB0eiA9IGludm9pY2VMaXN0JOioguWWruaZguWNgFtbaV1dKSwgXG4gICAgdHpvbmUgPSBcIlVUQ1wiKVxuYGBgIn0= -->
+<pre class="r"><code>i &lt;- 1
+with_tz(
+    ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[[i]], tz = invoiceList$訂單時區[[i]]), 
+    tzone = &quot;UTC&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxNS0wOS0xNSAxOTowNzozMCBVVENcIlxuIn0= -->
+<pre><code>[1] &quot;2015-09-15 19:07:30 UTC&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>##??</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIHdpdGhfdHooXG4gICAgeW1kX2htcyhpbnZvaWNlTGlzdCRg6KiC5Zau5pmC6ZaTKOS7peioguWWruaZguWNgOmhr+ekuilgW1sxXV0sIHR6ID0gXCJVVENcIiksIFxuICAgIHR6b25lID0gaW52b2ljZUxpc3Qk6KiC5Zau5pmC5Y2AW1sxXV1cbiAgICApXG5gYGAifQ== -->
+<pre class="r"><code> with_tz(
+    ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[[1]], tz = &quot;UTC&quot;), 
+    tzone = invoiceList$訂單時區[[1]]
+    )</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjAxNS0wOS0xNiAxMTowNzozMCBDU1RcIlxuIn0= -->
+<pre><code>[1] &quot;2015-09-16 11:07:30 CST&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yKGkgaW4gc2VxX2Fsb25nKGludm9pY2VMaXN0KSl7XG4gIHdpdGhfdHooXG4gICAgeW1kX2htcyhpbnZvaWNlTGlzdCRg6KiC5Zau5pmC6ZaTKOS7peioguWWruaZguWNgOmhr+ekuilgW1tpXV0sIHR6ID0gaW52b2ljZUxpc3Qk6KiC5Zau5pmC5Y2AW1tpXV0pLCBcbiAgICB0em9uZSA9IFwiVVRDXCJcbiAgICApICAtPiBpbnZvaWNlTGlzdCRVVEPmmYLplpNbW2ldXVxufVxuYGBgIn0= -->
+<pre class="r"><code>for(i in seq_along(invoiceList)){
+  with_tz(
+    ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[[i]], tz = invoiceList$訂單時區[[i]]), 
+    tzone = &quot;UTC&quot;
+    )  -&gt; invoiceList$UTC時間[[i]]
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>##MTanswer</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuKGludm9pY2VMaXN0JOioguWWruaZguWNgD09XCJBbWVyaWNhL05ld19Zb3JrXCIpIC0+IG55TG9naWNhbFxuKGludm9pY2VMaXN0JOioguWWruaZguWNgD09XCJBc2lhL1RhaXBlaVwiKSAtPiB0cExvZ2ljYWxcblxuaW52b2ljZUxpc3QkVVRD5pmC6ZaTW255TG9naWNhbF0gPC1cbiAgd2l0aF90eih5bWRfaG1zKGludm9pY2VMaXN0JGDoqILllq7mmYLplpMo5Lul6KiC5Zau5pmC5Y2A6aGv56S6KWBbbnlMb2dpY2FsXSxcbiAgICAgICAgICB0ej1cIkFtZXJpY2EvTmV3X1lvcmtcIiksdHpvbmU9XCJVVENcIilcbmludm9pY2VMaXN0JFVUQ+aZgumWk1t0cExvZ2ljYWxdIDwtXG4gIHdpdGhfdHooeW1kX2htcyhpbnZvaWNlTGlzdCRg6KiC5Zau5pmC6ZaTKOS7peioguWWruaZguWNgOmhr+ekuilgW3RwTG9naWNhbF0sXG4gICAgICAgICAgdHo9XCJBc2lhL1RhaXBlaVwiKSx0em9uZT1cIlVUQ1wiKVxuXG5gYGAifQ== -->
+<pre class="r"><code>(invoiceList$訂單時區==&quot;America/New_York&quot;) -&gt; nyLogical
+(invoiceList$訂單時區==&quot;Asia/Taipei&quot;) -&gt; tpLogical
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAibWlkdGVybS0yIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpgYGB7cn0KbGlicmFyeShsdWJyaWRhdGUpOyBsaWJyYXJ5KHN0cmluZ3IpOyBsaWJyYXJ5KHB1cnJyKTsgbGlicmFyeShyZWFkcik7CmBgYAojMS4xCmBgYHtyfQpob21ld29ya0RhdGEgPC0gZGF0YS5mcmFtZSgKICDlp5PlkI0gPSBjKCLlsI/mmI4iLCLlsI/oirEiLCLlsI/mlrAiKSwKICDkvZzmpa0x5YiG5pW4ID0gYygxMCw5LDUpLAogIOS9nOalrTLliIbmlbggPSBjKDEwLDEwLDkpLAogIHN0cmluZ3NBc0ZhY3RvcnMgPSBGCikKYGBgCgojMS4yCmVtYWlsVGV4dCA8LQogICLopqrmhJvnmoRzdHVkZW505aW977yM5oKo55qE5L2c5qWt5oiQ57i+54K677ya5L2c5qWtMSwgeTHliIY7IOS9nOalrTIsIHky5YiGIgpgYGB7cn0KZW1haWxfY29udGVudF9mdW4gPC0gZnVuY3Rpb24oaW5wdXQpewogIGVtYWlsVGV4dCA8LSBzdHJfYygi6Kaq5oSb55qEc3R1ZGVudOWlve+8jOaCqOeahOS9nOalreaIkOe4vueCuu+8miIsIuS9nOalrTEsIixpbnB1dFsi5L2c5qWtMeWIhuaVuCJdLAogICAgICAgICAgICAgICAgICAgICAiLOS9nOalrTIsIixpbnB1dFsi5L2c5qWtMuWIhuaVuCJdKQogIHJldHVybihlbWFpbFRleHQpCn0KYGBgCgpgYGB7cn0KZW1haWxfY29udGVudF9mdW4oaG9tZXdvcmtEYXRhWzMsXSkKYGBgCiMjTVRhbnN3ZXIKYGBge3J9CmVtYWlsX2NvbnRlbnRfZnVuMSA8LSBmdW5jdGlvbihpbnB1dCl7CiAgZW1haWxUZXh0IDwtCiAgIuimquaEm+eahHN0dWRlbnTlpb3vvIzmgqjnmoTkvZzmpa3miJDnuL7ngrrvvJrkvZzmpa0xLCB5MeWIhjsg5L2c5qWtMiwgeTLliIYiCiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0LCAic3R1ZGVudCIsIGlucHV0JOWnk+WQjSkgLT4gZW1haWxUZXh0T3V0CiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0T3V0LCJ5MSIsIGFzLmNoYXJhY3RlcihpbnB1dCTkvZzmpa0x5YiG5pW4KSkgLT4gZW1haWxUZXh0T3V0CiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0T3V0LCJ5MiIsIGFzLmNoYXJhY3RlcihpbnB1dCTkvZzmpa0y5YiG5pW4KSkgLT4gZW1haWxUZXh0T3V0CiAgcmV0dXJuKGVtYWlsVGV4dE91dCkKfQoKCmBgYAoKYGBge3J9CmVtYWlsX2NvbnRlbnRfZnVuMShob21ld29ya0RhdGFbMSxdKQpgYGAKYGBge3J9CmhvbWV3b3JrRGF0YVsxLF0k5aeT5ZCNCmBgYAojMgpgYGB7cn0Kc3RyX3NtYWxsQ2xvc2VzdCA8LSBmdW5jdGlvbihjaHJOdW1iZXIsY3JpdGljYWxOdW1iZXIpewogIGFzLm51bWVyaWMoY2hyTnVtYmVyKSAtPiBOdW1jaHJOdW1iZXIKICBOdW1jaHJOdW1iZXIgPD0gY3JpdGljYWxOdW1iZXIgLT4gTWF4TG9naQogIG1heChjaHJOdW1iZXJbTWF4TG9naV0pIC0+IEFuc01heAogIHJldHVybihBbnNNYXgpCiAgfSAKYGBgCgoKYGBge3J9CnN0cl9zbWFsbENsb3Nlc3QoYygxLDIsOCksNCkKYGBgCgoKIzMuMQpgYGB7cn0KbGlzdCgKICAiMTAxIj1saXN0KHVybD0iaHR0cDovL3d3dy5lY29uLm50cHUuZWR1LnR3L2Vjb24vZmlsZXMvV2F5LzIwMTYwNzIxOTUwMjEuZG9jIiksCiAgIjEwNCI9bGlzdCh1cmw9Imh0dHA6Ly93d3cuZWNvbi5udHB1LmVkdS50dy9lY29uL2ZpbGVzL1dheS8yMDE2MDcyMTk1MDQxLmRvYyIpLAogICIxMDUiPWxpc3QodXJsPSJodHRwOi8vd3d3LmVjb24ubnRwdS5lZHUudHcvZWNvbi9maWxlcy9XYXkvMjAxNzA1MTYxNDQzNTMuZG9jIiksCiAgIjEwNyI9bGlzdCh1cmw9Imh0dHA6Ly93d3cuZWNvbi5udHB1LmVkdS50dy9lY29uL2ZpbGVzL1dheS8yMDE4MDUxODEyMTY0My5wZGYiKQogICktPkVjb25Db3Vyc2VTZWxlY3Rpb25JbmZvCkVjb25Db3Vyc2VTZWxlY3Rpb25JbmZvCmBgYAoKYGBge3J9CkVjb25Db3Vyc2VTZWxlY3Rpb25JbmZvW1siMTAxIl1dJHVybApgYGAKCg==</div>
+invoiceList$UTC時間[nyLogical] &lt;-
+  with_tz(ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[nyLogical],
+          tz=&quot;America/New_York&quot;),tzone=&quot;UTC&quot;)
+invoiceList$UTC時間[tpLogical] &lt;-
+  with_tz(ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[tpLogical],
+          tz=&quot;Asia/Taipei&quot;),tzone=&quot;UTC&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#5</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG9hZCh1cmwoXCJodHRwczovL3d3dy5kcm9wYm94LmNvbS9zL2o0azRwb3Iwcmw2czMxNy9zYW1wbGVkVHJhbnNjcmlwdERhdGEuUmRhP3Jhdz10cnVlXCIpKVxuYygn5a246JmfJywn5a245pyf5oiQ57i+Jywn5a245YiG5pW4Jywn5a245bm0Jywn5a245pyfJywn5b+F6YG45L+u6aGe5Yil77yI5b+F77yP6YG477yP6YCa77yJJywn57O757SaJywn56eR55uu5ZCN56ixJywn5bm057SaJywn5a245bGGJykgLT5cbiAgbmFtZXMoc2FtcGxlZFRyYW5zY3JpcHREYXRhKVxuYGBgIn0= -->
+<pre class="r"><code>load(url(&quot;https://www.dropbox.com/s/j4k4por0rl6s317/sampledTranscriptData.Rda?raw=true&quot;))
+c('學號','學期成績','學分數','學年','學期','必選修類別（必／選／通）','系級','科目名稱','年級','學屆') -&gt;
+  names(sampledTranscriptData)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAibWlkdGVybS0yIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpgYGB7cn0KbGlicmFyeShsdWJyaWRhdGUpOyBsaWJyYXJ5KHN0cmluZ3IpOyBsaWJyYXJ5KHB1cnJyKTsgbGlicmFyeShyZWFkcik7CmBgYAojMS4xCmBgYHtyfQpob21ld29ya0RhdGEgPC0gZGF0YS5mcmFtZSgKICDlp5PlkI0gPSBjKCLlsI/mmI4iLCLlsI/oirEiLCLlsI/mlrAiKSwKICDkvZzmpa0x5YiG5pW4ID0gYygxMCw5LDUpLAogIOS9nOalrTLliIbmlbggPSBjKDEwLDEwLDkpLAogIHN0cmluZ3NBc0ZhY3RvcnMgPSBGCikKYGBgCgojMS4yCmVtYWlsVGV4dCA8LQogICLopqrmhJvnmoRzdHVkZW505aW977yM5oKo55qE5L2c5qWt5oiQ57i+54K677ya5L2c5qWtMSwgeTHliIY7IOS9nOalrTIsIHky5YiGIgpgYGB7cn0KZW1haWxfY29udGVudF9mdW4gPC0gZnVuY3Rpb24oaW5wdXQpewogIGVtYWlsVGV4dCA8LSBzdHJfYygi6Kaq5oSb55qEc3R1ZGVudOWlve+8jOaCqOeahOS9nOalreaIkOe4vueCuu+8miIsIuS9nOalrTEsIixpbnB1dFsi5L2c5qWtMeWIhuaVuCJdLAogICAgICAgICAgICAgICAgICAgICAiLOS9nOalrTIsIixpbnB1dFsi5L2c5qWtMuWIhuaVuCJdKQogIHJldHVybihlbWFpbFRleHQpCn0KYGBgCgpgYGB7cn0KZW1haWxfY29udGVudF9mdW4oaG9tZXdvcmtEYXRhWzMsXSkKYGBgCiMjTVRhbnN3ZXIKYGBge3J9CmVtYWlsX2NvbnRlbnRfZnVuMSA8LSBmdW5jdGlvbihpbnB1dCl7CiAgZW1haWxUZXh0IDwtCiAgIuimquaEm+eahHN0dWRlbnTlpb3vvIzmgqjnmoTkvZzmpa3miJDnuL7ngrrvvJrkvZzmpa0xLCB5MeWIhjsg5L2c5qWtMiwgeTLliIYiCiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0LCAic3R1ZGVudCIsIGlucHV0JOWnk+WQjSkgLT4gZW1haWxUZXh0T3V0CiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0T3V0LCJ5MSIsIGFzLmNoYXJhY3RlcihpbnB1dCTkvZzmpa0x5YiG5pW4KSkgLT4gZW1haWxUZXh0T3V0CiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0T3V0LCJ5MiIsIGFzLmNoYXJhY3RlcihpbnB1dCTkvZzmpa0y5YiG5pW4KSkgLT4gZW1haWxUZXh0T3V0CiAgcmV0dXJuKGVtYWlsVGV4dE91dCkKfQoKCmBgYAoKYGBge3J9CmVtYWlsX2NvbnRlbnRfZnVuMShob21ld29ya0RhdGFbMSxdKQpgYGAKYGBge3J9CmhvbWV3b3JrRGF0YVsxLF0k5aeT5ZCNCmBgYAojMgpgYGB7cn0Kc3RyX3NtYWxsQ2xvc2VzdCA8LSBmdW5jdGlvbihjaHJOdW1iZXIsY3JpdGljYWxOdW1iZXIpewogIGFzLm51bWVyaWMoY2hyTnVtYmVyKSAtPiBOdW1jaHJOdW1iZXIKICBOdW1jaHJOdW1iZXIgPD0gY3JpdGljYWxOdW1iZXIgLT4gTWF4TG9naQogIG1heChjaHJOdW1iZXJbTWF4TG9naV0pIC0+IEFuc01heAogIHJldHVybihBbnNNYXgpCiAgfSAKYGBgCgoKYGBge3J9CnN0cl9zbWFsbENsb3Nlc3QoYygxLDIsOCksNCkKYGBgCgoKIzMuMQpgYGB7cn0KbGlzdCgKICAiMTAxIj1saXN0KHVybD0iaHR0cDovL3d3dy5lY29uLm50cHUuZWR1LnR3L2Vjb24vZmlsZXMvV2F5LzIwMTYwNzIxOTUwMjEuZG9jIiksCiAgIjEwNCI9bGlzdCh1cmw9Imh0dHA6Ly93d3cuZWNvbi5udHB1LmVkdS50dy9lY29uL2ZpbGVzL1dheS8yMDE2MDcyMTk1MDQxLmRvYyIpLAogICIxMDUiPWxpc3QodXJsPSJodHRwOi8vd3d3LmVjb24ubnRwdS5lZHUudHcvZWNvbi9maWxlcy9XYXkvMjAxNzA1MTYxNDQzNTMuZG9jIiksCiAgIjEwNyI9bGlzdCh1cmw9Imh0dHA6Ly93d3cuZWNvbi5udHB1LmVkdS50dy9lY29uL2ZpbGVzL1dheS8yMDE4MDUxODEyMTY0My5wZGYiKQogICktPkVjb25Db3Vyc2VTZWxlY3Rpb25JbmZvCkVjb25Db3Vyc2VTZWxlY3Rpb25JbmZvCmBgYAoKYGBge3J9CkVjb25Db3Vyc2VTZWxlY3Rpb25JbmZvW1siMTAxIl1dJHVybApgYGAKCiM0CgpgYGB7cn0KbG9hZCh1cmwoImh0dHBzOi8vd3d3LmRyb3Bib3guY29tL3MvbWsyem1jYzJ3amt3Zjd3L2ludm9pY2VMaXN0LlJkYT9yYXc9dHJ1ZSIpKQpjKCfoqILllq7mmYLljYAnLCfoqILllq7mmYLplpMo5Lul6KiC5Zau5pmC5Y2A6aGv56S6KScsJ1VUQ+aZgumWkycpIC0+IG5hbWVzKGludm9pY2VMaXN0KQpgYGAKCmBgYHtyfQppIDwtIDEKd2l0aF90eigKICAgIHltZF9obXMoaW52b2ljZUxpc3QkYOioguWWruaZgumWkyjku6XoqILllq7mmYLljYDpoa/npLopYFtbaV1dLCB0eiA9IGludm9pY2VMaXN0JOioguWWruaZguWNgFtbaV1dKSwgCiAgICB0em9uZSA9ICJVVEMiKQpgYGAKIyM/PwpgYGB7cn0KIHdpdGhfdHooCiAgICB5bWRfaG1zKGludm9pY2VMaXN0JGDoqILllq7mmYLplpMo5Lul6KiC5Zau5pmC5Y2A6aGv56S6KWBbWzFdXSwgdHogPSAiVVRDIiksIAogICAgdHpvbmUgPSBpbnZvaWNlTGlzdCToqILllq7mmYLljYBbWzFdXQogICAgKQpgYGAKCgpgYGB7cn0KZm9yKGkgaW4gc2VxX2Fsb25nKGludm9pY2VMaXN0KSl7CiAgd2l0aF90eigKICAgIHltZF9obXMoaW52b2ljZUxpc3QkYOioguWWruaZgumWkyjku6XoqILllq7mmYLljYDpoa/npLopYFtbaV1dLCB0eiA9IGludm9pY2VMaXN0JOioguWWruaZguWNgFtbaV1dKSwgCiAgICB0em9uZSA9ICJVVEMiCiAgICApICAtPiBpbnZvaWNlTGlzdCRVVEPmmYLplpNbW2ldXQp9CmBgYAojI01UYW5zd2VyCmBgYHtyfQooaW52b2ljZUxpc3Qk6KiC5Zau5pmC5Y2APT0iQW1lcmljYS9OZXdfWW9yayIpIC0+IG55TG9naWNhbAooaW52b2ljZUxpc3Qk6KiC5Zau5pmC5Y2APT0iQXNpYS9UYWlwZWkiKSAtPiB0cExvZ2ljYWwKCmludm9pY2VMaXN0JFVUQ+aZgumWk1tueUxvZ2ljYWxdIDwtCiAgd2l0aF90eih5bWRfaG1zKGludm9pY2VMaXN0JGDoqILllq7mmYLplpMo5Lul6KiC5Zau5pmC5Y2A6aGv56S6KWBbbnlMb2dpY2FsXSwKICAgICAgICAgIHR6PSJBbWVyaWNhL05ld19Zb3JrIiksdHpvbmU9IlVUQyIpCmludm9pY2VMaXN0JFVUQ+aZgumWk1t0cExvZ2ljYWxdIDwtCiAgd2l0aF90eih5bWRfaG1zKGludm9pY2VMaXN0JGDoqILllq7mmYLplpMo5Lul6KiC5Zau5pmC5Y2A6aGv56S6KWBbdHBMb2dpY2FsXSwKICAgICAgICAgIHR6PSJBc2lhL1RhaXBlaSIpLHR6b25lPSJVVEMiKQoKYGBgCgoKIzUKYGBge3J9CmxvYWQodXJsKCJodHRwczovL3d3dy5kcm9wYm94LmNvbS9zL2o0azRwb3Iwcmw2czMxNy9zYW1wbGVkVHJhbnNjcmlwdERhdGEuUmRhP3Jhdz10cnVlIikpCmMoJ+WtuOiZnycsJ+WtuOacn+aIkOe4vicsJ+WtuOWIhuaVuCcsJ+WtuOW5tCcsJ+WtuOacnycsJ+W/hemBuOS/rumhnuWIpe+8iOW/he+8j+mBuO+8j+mAmu+8iScsJ+ezu+e0micsJ+enkeebruWQjeeosScsJ+W5tOe0micsJ+WtuOWxhicpIC0+CiAgbmFtZXMoc2FtcGxlZFRyYW5zY3JpcHREYXRhKQpgYGAKCg==</div>
 
 
 

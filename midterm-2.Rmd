@@ -81,3 +81,55 @@ EconCourseSelectionInfo
 EconCourseSelectionInfo[["101"]]$url
 ```
 
+#4
+
+```{r}
+load(url("https://www.dropbox.com/s/mk2zmcc2wjkwf7w/invoiceList.Rda?raw=true"))
+c('訂單時區','訂單時間(以訂單時區顯示)','UTC時間') -> names(invoiceList)
+```
+
+```{r}
+i <- 1
+with_tz(
+    ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[[i]], tz = invoiceList$訂單時區[[i]]), 
+    tzone = "UTC")
+```
+##??
+```{r}
+ with_tz(
+    ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[[1]], tz = "UTC"), 
+    tzone = invoiceList$訂單時區[[1]]
+    )
+```
+
+
+```{r}
+for(i in seq_along(invoiceList)){
+  with_tz(
+    ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[[i]], tz = invoiceList$訂單時區[[i]]), 
+    tzone = "UTC"
+    )  -> invoiceList$UTC時間[[i]]
+}
+```
+##MTanswer
+```{r}
+(invoiceList$訂單時區=="America/New_York") -> nyLogical
+(invoiceList$訂單時區=="Asia/Taipei") -> tpLogical
+
+invoiceList$UTC時間[nyLogical] <-
+  with_tz(ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[nyLogical],
+          tz="America/New_York"),tzone="UTC")
+invoiceList$UTC時間[tpLogical] <-
+  with_tz(ymd_hms(invoiceList$`訂單時間(以訂單時區顯示)`[tpLogical],
+          tz="Asia/Taipei"),tzone="UTC")
+
+```
+
+
+#5
+```{r}
+load(url("https://www.dropbox.com/s/j4k4por0rl6s317/sampledTranscriptData.Rda?raw=true"))
+c('學號','學期成績','學分數','學年','學期','必選修類別（必／選／通）','系級','科目名稱','年級','學屆') ->
+  names(sampledTranscriptData)
+```
+
