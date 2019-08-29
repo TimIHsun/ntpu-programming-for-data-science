@@ -1767,6 +1767,14 @@ $(document).ready(function () {
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShsdWJyaWRhdGUpOyBsaWJyYXJ5KHN0cmluZ3IpOyBsaWJyYXJ5KHB1cnJyKTsgbGlicmFyeShyZWFkcik7XG5gYGAifQ== -->
 <pre class="r"><code>library(lubridate); library(stringr); library(purrr); library(readr);</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYbHVicmlkYXRl4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOKAmHBhY2thZ2U6YmFzZeKAmTpcblxuICAgIGRhdGVcbiJ9 -->
+<pre><code>
+Attaching package: ‘lubridate’
+
+The following object is masked from ‘package:base’:
+
+    date</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#1.1</p>
@@ -1838,21 +1846,77 @@ $(document).ready(function () {
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>#2</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3NtYWxsQ2xvc2VzdCA8LSBmdW5jdGlvbihjaHJOdW1iZXIsY3JpdGljYWxOdW1iZXIpe1xuICBhcy5udW1lcmljKGNock51bWJlcikgLT4gTnVtY2hyTnVtYmVyXG4gIE51bWNock51bWJlciA8PSBjcml0aWNhbE51bWJlciAtPiBNYXhMb2dpXG4gIG1heChjaHJOdW1iZXJbTWF4TG9naV0pIC0+IEFuc01heFxuICBwcmludChBbnNNYXgpXG4gIH0gXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3NtYWxsQ2xvc2VzdCA8LSBmdW5jdGlvbihjaHJOdW1iZXIsY3JpdGljYWxOdW1iZXIpe1xuICBhcy5udW1lcmljKGNock51bWJlcikgLT4gTnVtY2hyTnVtYmVyXG4gIE51bWNock51bWJlciA8PSBjcml0aWNhbE51bWJlciAtPiBNYXhMb2dpXG4gIG1heChjaHJOdW1iZXJbTWF4TG9naV0pIC0+IEFuc01heFxuICByZXR1cm4oQW5zTWF4KVxuICB9IFxuYGBgIn0= -->
 <pre class="r"><code>str_smallClosest &lt;- function(chrNumber,criticalNumber){
   as.numeric(chrNumber) -&gt; NumchrNumber
   NumchrNumber &lt;= criticalNumber -&gt; MaxLogi
   max(chrNumber[MaxLogi]) -&gt; AnsMax
-  print(AnsMax)
+  return(AnsMax)
   } </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX3NtYWxsQ2xvc2VzdChjKDEsMiw4KSw0KVxuXG5gYGAifQ== -->
+<pre class="r"><code>str_smallClosest(c(1,2,8),4)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDJcbiJ9 -->
+<pre><code>[1] 2</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#3.1</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcbiAgXCIxMDFcIj1saXN0KHVybD1cImh0dHA6Ly93d3cuZWNvbi5udHB1LmVkdS50dy9lY29uL2ZpbGVzL1dheS8yMDE2MDcyMTk1MDIxLmRvY1wiKSxcbiAgXCIxMDRcIj1saXN0KHVybD1cImh0dHA6Ly93d3cuZWNvbi5udHB1LmVkdS50dy9lY29uL2ZpbGVzL1dheS8yMDE2MDcyMTk1MDQxLmRvY1wiKSxcbiAgXCIxMDVcIj1saXN0KHVybD1cImh0dHA6Ly93d3cuZWNvbi5udHB1LmVkdS50dy9lY29uL2ZpbGVzL1dheS8yMDE3MDUxNjE0NDM1My5kb2NcIiksXG4gIFwiMTA3XCI9bGlzdCh1cmw9XCJodHRwOi8vd3d3LmVjb24ubnRwdS5lZHUudHcvZWNvbi9maWxlcy9XYXkvMjAxODA1MTgxMjE2NDMucGRmXCIpXG4gICktPkVjb25Db3Vyc2VTZWxlY3Rpb25JbmZvXG5FY29uQ291cnNlU2VsZWN0aW9uSW5mb1xuYGBgIn0= -->
+<pre class="r"><code>list(
+  &quot;101&quot;=list(url=&quot;http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195021.doc&quot;),
+  &quot;104&quot;=list(url=&quot;http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195041.doc&quot;),
+  &quot;105&quot;=list(url=&quot;http://www.econ.ntpu.edu.tw/econ/files/Way/20170516144353.doc&quot;),
+  &quot;107&quot;=list(url=&quot;http://www.econ.ntpu.edu.tw/econ/files/Way/20180518121643.pdf&quot;)
+  )-&gt;EconCourseSelectionInfo
+EconCourseSelectionInfo</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJGAxMDFgXG4kYDEwMWAkdXJsXG5bMV0gXCJodHRwOi8vd3d3LmVjb24ubnRwdS5lZHUudHcvZWNvbi9maWxlcy9XYXkvMjAxNjA3MjE5NTAyMS5kb2NcIlxuXG5cbiRgMTA0YFxuJGAxMDRgJHVybFxuWzFdIFwiaHR0cDovL3d3dy5lY29uLm50cHUuZWR1LnR3L2Vjb24vZmlsZXMvV2F5LzIwMTYwNzIxOTUwNDEuZG9jXCJcblxuXG4kYDEwNWBcbiRgMTA1YCR1cmxcblsxXSBcImh0dHA6Ly93d3cuZWNvbi5udHB1LmVkdS50dy9lY29uL2ZpbGVzL1dheS8yMDE3MDUxNjE0NDM1My5kb2NcIlxuXG5cbiRgMTA3YFxuJGAxMDdgJHVybFxuWzFdIFwiaHR0cDovL3d3dy5lY29uLm50cHUuZWR1LnR3L2Vjb24vZmlsZXMvV2F5LzIwMTgwNTE4MTIxNjQzLnBkZlwiXG4ifQ== -->
+<pre><code>$`101`
+$`101`$url
+[1] &quot;http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195021.doc&quot;
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAibWlkdGVybS0yIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpgYGB7cn0KbGlicmFyeShsdWJyaWRhdGUpOyBsaWJyYXJ5KHN0cmluZ3IpOyBsaWJyYXJ5KHB1cnJyKTsgbGlicmFyeShyZWFkcik7CmBgYAojMS4xCmBgYHtyfQpob21ld29ya0RhdGEgPC0gZGF0YS5mcmFtZSgKICDlp5PlkI0gPSBjKCLlsI/mmI4iLCLlsI/oirEiLCLlsI/mlrAiKSwKICDkvZzmpa0x5YiG5pW4ID0gYygxMCw5LDUpLAogIOS9nOalrTLliIbmlbggPSBjKDEwLDEwLDkpLAogIHN0cmluZ3NBc0ZhY3RvcnMgPSBGCikKYGBgCgojMS4yCmVtYWlsVGV4dCA8LQogICLopqrmhJvnmoRzdHVkZW505aW977yM5oKo55qE5L2c5qWt5oiQ57i+54K677ya5L2c5qWtMSwgeTHliIY7IOS9nOalrTIsIHky5YiGIgpgYGB7cn0KZW1haWxfY29udGVudF9mdW4gPC0gZnVuY3Rpb24oaW5wdXQpewogIGVtYWlsVGV4dCA8LSBzdHJfYygi6Kaq5oSb55qEc3R1ZGVudOWlve+8jOaCqOeahOS9nOalreaIkOe4vueCuu+8miIsIuS9nOalrTEsIixpbnB1dFsi5L2c5qWtMeWIhuaVuCJdLAogICAgICAgICAgICAgICAgICAgICAiLOS9nOalrTIsIixpbnB1dFsi5L2c5qWtMuWIhuaVuCJdKQogIHJldHVybihlbWFpbFRleHQpCn0KYGBgCgpgYGB7cn0KZW1haWxfY29udGVudF9mdW4oaG9tZXdvcmtEYXRhWzMsXSkKYGBgCiMjTVRhbnN3ZXIKYGBge3J9CmVtYWlsX2NvbnRlbnRfZnVuMSA8LSBmdW5jdGlvbihpbnB1dCl7CiAgZW1haWxUZXh0IDwtCiAgIuimquaEm+eahHN0dWRlbnTlpb3vvIzmgqjnmoTkvZzmpa3miJDnuL7ngrrvvJrkvZzmpa0xLCB5MeWIhjsg5L2c5qWtMiwgeTLliIYiCiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0LCAic3R1ZGVudCIsIGlucHV0JOWnk+WQjSkgLT4gZW1haWxUZXh0T3V0CiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0T3V0LCJ5MSIsIGFzLmNoYXJhY3RlcihpbnB1dCTkvZzmpa0x5YiG5pW4KSkgLT4gZW1haWxUZXh0T3V0CiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0T3V0LCJ5MiIsIGFzLmNoYXJhY3RlcihpbnB1dCTkvZzmpa0y5YiG5pW4KSkgLT4gZW1haWxUZXh0T3V0CiAgcmV0dXJuKGVtYWlsVGV4dE91dCkKfQoKCmBgYAoKYGBge3J9CmVtYWlsX2NvbnRlbnRfZnVuMShob21ld29ya0RhdGFbMSxdKQpgYGAKYGBge3J9CmhvbWV3b3JrRGF0YVsxLF0k5aeT5ZCNCmBgYAoKYGBge3J9CnN0cl9zbWFsbENsb3Nlc3QgPC0gZnVuY3Rpb24oY2hyTnVtYmVyLGNyaXRpY2FsTnVtYmVyKXsKICBhcy5udW1lcmljKGNock51bWJlcikgLT4gTnVtY2hyTnVtYmVyCiAgTnVtY2hyTnVtYmVyIDw9IGNyaXRpY2FsTnVtYmVyIC0+IE1heExvZ2kKICBtYXgoY2hyTnVtYmVyW01heExvZ2ldKSAtPiBBbnNNYXgKICBwcmludChBbnNNYXgpCiAgfSAKYGBgCgoKCgo=</div>
+
+$`104`
+$`104`$url
+[1] &quot;http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195041.doc&quot;
+
+
+$`105`
+$`105`$url
+[1] &quot;http://www.econ.ntpu.edu.tw/econ/files/Way/20170516144353.doc&quot;
+
+
+$`107`
+$`107`$url
+[1] &quot;http://www.econ.ntpu.edu.tw/econ/files/Way/20180518121643.pdf&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRWNvbkNvdXJzZVNlbGVjdGlvbkluZm9bW1wiMTAxXCJdXSR1cmxcbmBgYCJ9 -->
+<pre class="r"><code>EconCourseSelectionInfo[[&quot;101&quot;]]$url</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaHR0cDovL3d3dy5lY29uLm50cHUuZWR1LnR3L2Vjb24vZmlsZXMvV2F5LzIwMTYwNzIxOTUwMjEuZG9jXCJcbiJ9 -->
+<pre><code>[1] &quot;http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195021.doc&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAibWlkdGVybS0yIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpgYGB7cn0KbGlicmFyeShsdWJyaWRhdGUpOyBsaWJyYXJ5KHN0cmluZ3IpOyBsaWJyYXJ5KHB1cnJyKTsgbGlicmFyeShyZWFkcik7CmBgYAojMS4xCmBgYHtyfQpob21ld29ya0RhdGEgPC0gZGF0YS5mcmFtZSgKICDlp5PlkI0gPSBjKCLlsI/mmI4iLCLlsI/oirEiLCLlsI/mlrAiKSwKICDkvZzmpa0x5YiG5pW4ID0gYygxMCw5LDUpLAogIOS9nOalrTLliIbmlbggPSBjKDEwLDEwLDkpLAogIHN0cmluZ3NBc0ZhY3RvcnMgPSBGCikKYGBgCgojMS4yCmVtYWlsVGV4dCA8LQogICLopqrmhJvnmoRzdHVkZW505aW977yM5oKo55qE5L2c5qWt5oiQ57i+54K677ya5L2c5qWtMSwgeTHliIY7IOS9nOalrTIsIHky5YiGIgpgYGB7cn0KZW1haWxfY29udGVudF9mdW4gPC0gZnVuY3Rpb24oaW5wdXQpewogIGVtYWlsVGV4dCA8LSBzdHJfYygi6Kaq5oSb55qEc3R1ZGVudOWlve+8jOaCqOeahOS9nOalreaIkOe4vueCuu+8miIsIuS9nOalrTEsIixpbnB1dFsi5L2c5qWtMeWIhuaVuCJdLAogICAgICAgICAgICAgICAgICAgICAiLOS9nOalrTIsIixpbnB1dFsi5L2c5qWtMuWIhuaVuCJdKQogIHJldHVybihlbWFpbFRleHQpCn0KYGBgCgpgYGB7cn0KZW1haWxfY29udGVudF9mdW4oaG9tZXdvcmtEYXRhWzMsXSkKYGBgCiMjTVRhbnN3ZXIKYGBge3J9CmVtYWlsX2NvbnRlbnRfZnVuMSA8LSBmdW5jdGlvbihpbnB1dCl7CiAgZW1haWxUZXh0IDwtCiAgIuimquaEm+eahHN0dWRlbnTlpb3vvIzmgqjnmoTkvZzmpa3miJDnuL7ngrrvvJrkvZzmpa0xLCB5MeWIhjsg5L2c5qWtMiwgeTLliIYiCiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0LCAic3R1ZGVudCIsIGlucHV0JOWnk+WQjSkgLT4gZW1haWxUZXh0T3V0CiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0T3V0LCJ5MSIsIGFzLmNoYXJhY3RlcihpbnB1dCTkvZzmpa0x5YiG5pW4KSkgLT4gZW1haWxUZXh0T3V0CiAgc3RyX3JlcGxhY2UoZW1haWxUZXh0T3V0LCJ5MiIsIGFzLmNoYXJhY3RlcihpbnB1dCTkvZzmpa0y5YiG5pW4KSkgLT4gZW1haWxUZXh0T3V0CiAgcmV0dXJuKGVtYWlsVGV4dE91dCkKfQoKCmBgYAoKYGBge3J9CmVtYWlsX2NvbnRlbnRfZnVuMShob21ld29ya0RhdGFbMSxdKQpgYGAKYGBge3J9CmhvbWV3b3JrRGF0YVsxLF0k5aeT5ZCNCmBgYAojMgpgYGB7cn0Kc3RyX3NtYWxsQ2xvc2VzdCA8LSBmdW5jdGlvbihjaHJOdW1iZXIsY3JpdGljYWxOdW1iZXIpewogIGFzLm51bWVyaWMoY2hyTnVtYmVyKSAtPiBOdW1jaHJOdW1iZXIKICBOdW1jaHJOdW1iZXIgPD0gY3JpdGljYWxOdW1iZXIgLT4gTWF4TG9naQogIG1heChjaHJOdW1iZXJbTWF4TG9naV0pIC0+IEFuc01heAogIHJldHVybihBbnNNYXgpCiAgfSAKYGBgCgoKYGBge3J9CnN0cl9zbWFsbENsb3Nlc3QoYygxLDIsOCksNCkKYGBgCgoKIzMuMQpgYGB7cn0KbGlzdCgKICAiMTAxIj1saXN0KHVybD0iaHR0cDovL3d3dy5lY29uLm50cHUuZWR1LnR3L2Vjb24vZmlsZXMvV2F5LzIwMTYwNzIxOTUwMjEuZG9jIiksCiAgIjEwNCI9bGlzdCh1cmw9Imh0dHA6Ly93d3cuZWNvbi5udHB1LmVkdS50dy9lY29uL2ZpbGVzL1dheS8yMDE2MDcyMTk1MDQxLmRvYyIpLAogICIxMDUiPWxpc3QodXJsPSJodHRwOi8vd3d3LmVjb24ubnRwdS5lZHUudHcvZWNvbi9maWxlcy9XYXkvMjAxNzA1MTYxNDQzNTMuZG9jIiksCiAgIjEwNyI9bGlzdCh1cmw9Imh0dHA6Ly93d3cuZWNvbi5udHB1LmVkdS50dy9lY29uL2ZpbGVzL1dheS8yMDE4MDUxODEyMTY0My5wZGYiKQogICktPkVjb25Db3Vyc2VTZWxlY3Rpb25JbmZvCkVjb25Db3Vyc2VTZWxlY3Rpb25JbmZvCmBgYAoKYGBge3J9CkVjb25Db3Vyc2VTZWxlY3Rpb25JbmZvW1siMTAxIl1dJHVybApgYGAKCg==</div>
 
 
 

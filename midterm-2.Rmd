@@ -50,16 +50,34 @@ email_content_fun1(homeworkData[1,])
 ```{r}
 homeworkData[1,]$姓名
 ```
-
+#2
 ```{r}
 str_smallClosest <- function(chrNumber,criticalNumber){
   as.numeric(chrNumber) -> NumchrNumber
   NumchrNumber <= criticalNumber -> MaxLogi
   max(chrNumber[MaxLogi]) -> AnsMax
-  print(AnsMax)
+  return(AnsMax)
   } 
 ```
 
 
+```{r}
+str_smallClosest(c(1,2,8),4)
+```
 
+
+#3.1
+```{r}
+list(
+  "101"=list(url="http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195021.doc"),
+  "104"=list(url="http://www.econ.ntpu.edu.tw/econ/files/Way/2016072195041.doc"),
+  "105"=list(url="http://www.econ.ntpu.edu.tw/econ/files/Way/20170516144353.doc"),
+  "107"=list(url="http://www.econ.ntpu.edu.tw/econ/files/Way/20180518121643.pdf")
+  )->EconCourseSelectionInfo
+EconCourseSelectionInfo
+```
+
+```{r}
+EconCourseSelectionInfo[["101"]]$url
+```
 
