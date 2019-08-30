@@ -172,21 +172,37 @@ dateTimeLisbon
 ```
 
 ```{r}
-as.character(ymd_hms(question1DF$date_time,tz ="Europe/Lisbon"))
+i <- 1
+with_tz(ymd_hms(question1DF$date_time[[i]], tz=question1DF$time_zone[[i]]), tzone ="Europe/Lisbon")
 ```
 
 ```{r}
+for(i in seq_along(question1DF)){
+  with_tz(
+    ymd_hms(
+      question1DF$date_time[[i]], tz=question1DF$time_zone[[i]]), tzone ="Europe/Lisbon"
+    )-> dateTimeLisbon[[i]]
+
+}
+dateTimeLisbon
+```
+##false
+```{r}
+as.character(ymd_hms(question1DF$date_time,tz ="Europe/Lisbon"))
+```
+##MTans
+```{r}
 question1DF$time_zone == "Asia/Taipei" -> logiTP
 question1DF$time_zone == "America/New_York" -> logiNY
-dateTimeLisbon <- vector("character",length(question1DF$date_time))
-dateTimeLisbon[logiTP] <-
+dateTimeLisbon1 <- vector("character",length(question1DF$date_time))
+dateTimeLisbon1[logiTP] <-
   as.character(
     with_tz(
       ymd_hms(question1DF$date_time[logiTP],tz="Asia/Taipei"),
       tzone="Europe/Lisbon"
     )
   )
-dateTimeLisbon[logiNY] <-
+dateTimeLisbon1[logiNY] <-
   as.character(
     with_tz(
       ymd_hms(question1DF$date_time[logiNY],tz="America/New_York"),
@@ -194,6 +210,6 @@ dateTimeLisbon[logiNY] <-
     )
   )
 
-dateTimeLisbon
+dateTimeLisbon1
 ```
 
