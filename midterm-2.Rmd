@@ -2,7 +2,7 @@
 title: "midterm-2"
 output: html_notebook
 ---
-
+#midTerm2
 ```{r}
 library(lubridate); library(stringr); library(purrr); library(readr);
 ```
@@ -131,5 +131,69 @@ invoiceList$UTC時間[tpLogical] <-
 load(url("https://www.dropbox.com/s/j4k4por0rl6s317/sampledTranscriptData.Rda?raw=true"))
 c('學號','學期成績','學分數','學年','學期','必選修類別（必／選／通）','系級','科目名稱','年級','學屆') ->
   names(sampledTranscriptData)
+```
+
+```{r}
+ str_sub(sampledTranscriptData$學號,5,6) != 73 & str_detect(sampledTranscriptData$系級,"經濟") -> 
+ transferLogi
+ sum(transferLogi)
+ unique(sampledTranscriptData$學號[transferLogi]) -> changeMajorStudent
+```
+
+#Final
+```{r}
+library(lubridate); library(stringr); library(purrr); library(readr);
+load(url("https://www.dropbox.com/s/8fcueq17vsy25cc/finalExam107-2.Rda?raw=1"))
+```
+##1
+```{r}
+str_smallClosest <- function(chrNumber,criticalNumber){
+  as.numeric(chrNumber)->NumchrNumber
+  max(chrNumber[NumchrNumber <= criticalNumber]) -> AnsMax
+  return(AnsMax)
+}
+```
+
+```{r}
+str_smallClosest(c("2","178","987"),456)-> MaxAns
+class(MaxAns)
+```
+
+
+#3
+```{r}
+question1Data() -> question1DF
+question1DF
+```
+
+```{r}
+dateTimeLisbon <- vector("character", 10)
+dateTimeLisbon
+```
+
+```{r}
+as.character(ymd_hms(question1DF$date_time,tz ="Europe/Lisbon"))
+```
+
+```{r}
+question1DF$time_zone == "Asia/Taipei" -> logiTP
+question1DF$time_zone == "America/New_York" -> logiNY
+dateTimeLisbon <- vector("character",length(question1DF$date_time))
+dateTimeLisbon[logiTP] <-
+  as.character(
+    with_tz(
+      ymd_hms(question1DF$date_time[logiTP],tz="Asia/Taipei"),
+      tzone="Europe/Lisbon"
+    )
+  )
+dateTimeLisbon[logiNY] <-
+  as.character(
+    with_tz(
+      ymd_hms(question1DF$date_time[logiNY],tz="America/New_York"),
+      tzone="Europe/Lisbon"
+    )
+  )
+
+dateTimeLisbon
 ```
 
