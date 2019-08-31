@@ -213,3 +213,176 @@ dateTimeLisbon1[logiNY] <-
 dateTimeLisbon1
 ```
 
+
+
+
+```{r}
+question2DF <- question2Data()
+```
+#4
+```{r}
+question2DF <- question2Data()
+```
+
+```{r}
+tzchange <- function(chrDateTimeInput,fromTz,toTz){
+  with_tz(ymd_hms(chrDateTimeInput, tz = fromTz), tzone = toTz)-> toTzNum
+  as.character(toTzNum) -> toTzNum
+  return(toTzNum)
+}
+```
+
+```{r}
+tzchange(question2DF$date_time[[1]],question2DF$time_zone[[1]],"Europe/Lisbon")
+```
+
+```{r}
+  dateTimeLisbon2 <- vector("character", length(question2DF$date_time))
+
+
+for(i in seq_along(question2DF$date_time)){
+  tzchange(question2DF$date_time[[i]],question2DF$time_zone[[i]],"Europe/Lisbon")->dateTimeLisbon2[[i]]
+  
+}
+```
+
+```{r}
+dateTimeLisbon2[[1]]
+```
+
+
+```{r}
+seq_along(question2DF)
+```
+##MTans
+```{r}
+levels(as.factor(question2DF$time_zone))-> allTzones
+dateTimeLisbon2MT <- vector("character",length(question2DF$date_time))
+for(i in seq_along(allTzones)){
+  #i<-1
+  question2DF$time_zone==allTzones[[i]] -> logiTZ_i  #time_zone 依樣的就可以一起動作!
+  tzchange(question2DF$date_time[logiTZ_i],
+           allTzones[[i]],
+           "Europe/Lisbon") -> dateTimeLisbon2MT[logiTZ_i]
+}
+
+```
+
+```{r}
+length(allTzones)
+```
+
+```{r}
+load(url("https://www.dropbox.com/s/t148l8bflvubyhm/GA.Rda?raw=1"))
+```
+
+
+
+```{r}
+numRow <- vector("integer", 9)
+
+for(i in seq_along(
+  user_report_exportStudent[["dates"]][["sessions"]])
+  ){
+  nrow(
+    user_report_exportStudent[["dates"]][["sessions"]][[i]]
+    )->numRow[[i]]
+}
+```
+
+```{r}
+sum(numRow) -> totalClicks
+```
+
+
+```{r}
+user_report_exportDesktop[["dates"]][["sessions"]][[9]]$activities[[1]]$details[[1]]$`Page URL`
+
+
+```
+
+
+```{r}
+user_report_exportDesktop[["dates"]][["sessions"]][[1]]$activities[[1]]$details -> details1
+
+details1[[1]]$`Page URL`[[1]] -> session6_act1_url
+
+session6_act1_url
+```
+```{r}
+testVect <- vector("character", 2)
+i <- 1
+activity <- user_report_exportDesktop[["dates"]][["sessions"]][[2]]$activities
+for(i in seq_along(activity)){
+  activity[[i]]$details[[1]]$`Page URL`-> testVect[[i]]
+  }
+```
+
+```{r}
+testVect
+```
+
+```{r}
+activityURL_find <- function(activity){
+  urlVect <- vector("character", length(activity))
+  for(i in seq_along(activity)){
+  activity[[i]]$details[[1]]$`Page URL`[[1]]->urlVect[[i]]
+  }
+  return(urlVect)
+  }
+```
+
+```{r}
+length(user_report_exportDesktop[["dates"]][["sessions"]][[2]]$activities)
+```
+
+```{r}
+activityURL_find(user_report_exportDesktop[["dates"]][["sessions"]][[4]]$activities)
+```
+```{r}
+length(user_report_exportDesktop[["dates"]][["sessions"]])
+seq_along(user_report_exportDesktop[["dates"]]$sessions)
+```
+
+```{r}
+allURL <- vector("list", length(user_report_exportDesktop[["dates"]][["sessions"]]))
+
+for(i in seq_along(user_report_exportDesktop[["dates"]]$sessions)){
+  activityURL_find(user_report_exportDesktop[["dates"]][["sessions"]][[i]]$activities)-> allURL[[i]]
+}
+```
+
+```{r}
+unlist(allURL)->allURLs_chr
+```
+
+```{r}
+sha2
+```
+
+```{r}
+str_replace_all(allURLs_chr,"/course-107-2-learning-progress/","")->sha1
+str_replace_all(sha1,".html","")->sha2
+
+
+data.frame(
+  sha = sha2,
+  visir_count = 
+)
+```
+
+
+```{r}
+str_replace_all(allURLs_chr,"/course-107-2-learning-progress/","")->sha1
+str_replace_all(sha1,".html","")->sha2
+```
+
+```{r}
+table(sha2)
+```
+```{r}
+for (i in seq_along(sha2)) {
+  table(sha2)[]
+}
+```
+
