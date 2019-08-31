@@ -357,32 +357,88 @@ unlist(allURL)->allURLs_chr
 ```
 
 ```{r}
+str_replace_all(allURLs_chr,"/course-107-2-learning-progress/","")->sha1
+str_replace_all(sha1,".html","")->sha2
+```
+
+```{r}
+unique(sha2) -> sha3
+```
+
+```{r}
 sha2
 ```
 
-```{r}
-str_replace_all(allURLs_chr,"/course-107-2-learning-progress/","")->sha1
-str_replace_all(sha1,".html","")->sha2
-
-
-data.frame(
-  sha = sha2,
-  visir_count = 
-)
-```
-
 
 ```{r}
 str_replace_all(allURLs_chr,"/course-107-2-learning-progress/","")->sha1
 str_replace_all(sha1,".html","")->sha2
 ```
+
+
+
 
 ```{r}
 table(sha2)
 ```
 ```{r}
-for (i in seq_along(sha2)) {
-  table(sha2)[]
+table(sha2)[["1f5b2ca6c"]]
+```
+```{r}
+visitCount_fun <- function(sha){
+  table(sha2)[[sha]]
 }
+```
+
+
+```{r}
+visitCount_fun("1f5b2ca6c")
+```
+```{r}
+visitCountVect <- vector("integer", length(sha3))
+for(i in seq_along(sha3)){
+  visitCount_fun(sha3[[i]])-> visitCountVect[[i]]
+}
+```
+
+```{r}
+visitCountVect
+```
+
+```{r}
+sha3
+```
+
+
+```{r}
+
+data.frame(
+  sha = sha3,
+  visit_count = visitCountVect,
+  stringsAsFactors = F
+)
+```
+##ansMT
+```{r}
+table(allURLs_chr) -> tb_allURLs
+names(tb_allURLs) -> urlNames
+str_replace_all(urlNames, 
+                c("/course-107-2-learning-progress/"="",
+                  ".html"="")) -> shaValues
+df_teacherVisits <- data.frame(
+  sha=shaValues,
+  visit_count=as.integer(tb_allURLs),
+  stringsAsFactors = F
+)
+
+df_teacherVisits
+```
+
+
+```{r}
+shaValues
+```
+```{r}
+urlNames
 ```
 
